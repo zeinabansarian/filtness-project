@@ -46,24 +46,98 @@
         text-align: right;
       }
     }
-    .rSide{
-        width: 58.8125vw;
+    .rSide {
+      width: 58.8125vw;
     }
-    .lSide{
-        width: 41.1vw;
-        align-self: flex-end;
-        .imgS{
-            margin-right: -100px;
-            @media only screen and (max-width: 1947px) {
-                margin-right: -80px;
-            }
-            @media only screen and (max-width: 1445px) {
-                margin-right: -60px;
-            }
-            img{
-                width: 100%;
+    .lSide {
+      width: 41.1vw;
+      align-self: flex-end;
+      .imgS {
+        margin-right: -100px;
+        @media only screen and (max-width: 1947px) {
+          margin-right: -80px;
+        }
+        @media only screen and (max-width: 1445px) {
+          margin-right: -60px;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.callUs {
+  direction: rtl;
+  .callContainer {
+    margin-top: 240px;
+    display: flex;
+    column-gap: 48px;
+    align-items: end;
+    padding: 0 80px;
+    .rSide {
+      width: 50%;
+      .imgS {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .lSide {
+      width: 50%;
+      .callNumber {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 53px;
+        p {
+          //styleName: 24/b;
+          font-family: IRANYekan;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 41.45px;
+          text-align: right;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+          //styleName: 36/black;
+          font-family: IRANYekan;
+          font-size: 36px;
+          font-weight: 900;
+          line-height: 62.18px;
+          text-align: right;
+        }
+      }
+      .social{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 80px;
+        p {
+          //styleName: 24/b;
+          font-family: IRANYekan;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 41.45px;
+          text-align: right;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            column-gap: 30px;
+            a{
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                border: 2px solid #0000004D;
             }
         }
+      }
     }
   }
 }

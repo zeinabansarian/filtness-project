@@ -67,4 +67,75 @@
 }
 .aboutUs .section2 .lSide .imgS img {
   width: 100%;
+}
+
+.callUs {
+  direction: rtl;
+}
+.callUs .callContainer {
+  margin-top: 240px;
+  display: flex;
+  -moz-column-gap: 48px;
+       column-gap: 48px;
+  align-items: end;
+  padding: 0 80px;
+}
+.callUs .callContainer .rSide {
+  width: 50%;
+}
+.callUs .callContainer .rSide .imgS img {
+  width: 100%;
+}
+.callUs .callContainer .lSide {
+  width: 50%;
+}
+.callUs .callContainer .lSide .callNumber {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 53px;
+}
+.callUs .callContainer .lSide .callNumber p {
+  font-family: IRANYekan;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 41.45px;
+  text-align: right;
+}
+.callUs .callContainer .lSide .callNumber a {
+  text-decoration: none;
+  color: black;
+  font-family: IRANYekan;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 62.18px;
+  text-align: right;
+}
+.callUs .callContainer .lSide .social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.callUs .callContainer .lSide .social p {
+  font-family: IRANYekan;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 41.45px;
+  text-align: right;
+}
+.callUs .callContainer .lSide .social ul {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.callUs .callContainer .lSide .social ul a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.3019607843);
 }/*# sourceMappingURL=m-style.css.map */
