@@ -1,0 +1,898 @@
+$black:#000000;
+$white:#fff;
+$Orange:#FF7B00;
+$Gray:#D9D9D9;
+
+
+main.CourseShow{
+    overflow: hidden;
+    .BannerC{
+        overflow: hidden;
+        width: 100%;
+        max-height: 337px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: rgba(36, 35, 35, 0.39);
+        }
+        >img{
+            width: 100%;
+            max-height: 337px;
+            object-fit: cover;
+        }
+        .overlay{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin-top: auto;
+            width: 92%;
+            height: 35%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 0em;
+            .Title{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                h1{
+                   font-size: 26px;
+                   font-weight: 900;
+                   line-height: 62.18px;
+                   color: $white;
+                }
+            }
+        }
+    }
+    .BroadCrumbs{
+        width: 100%;
+        display: flex;
+        ul{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 30px;
+            .nav-Item{
+                width: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                &:first-child{
+                    padding-right: 0;
+                }
+                &:not(:last-child){
+                    &::before{
+                        content: ">";
+                        position: absolute;
+                        right: 100%;
+                        top: 25%;
+                        font-size: 20px;
+                        color: #fff;
+                        padding: 0 10px;
+                    }
+                }
+            }
+            .nav-Link{
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 34.55px;
+                color: $white;
+            }
+        }
+    }
+    .Containers{
+        width: 90%;
+        display: flex;
+        display: grid;
+        grid-template-columns: 65% 35%;
+        margin:2em auto;
+        gap: 2em;
+
+    }
+    .FixedSection{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        gap: 1em;
+        .BasketDetail{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid $white;
+            padding: 15px;
+           
+        }
+        .basket-Item{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            .PriceM,.Price{
+                width: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p{
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 34.55px;
+                    color: $white;
+                }
+            }
+            .Price p{
+                font-size: 36px;
+                font-weight: 900;
+                line-height: 62.18px;
+                color: $white;
+            }
+            button.AddTOBasket{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: .5em;
+                border-radius: 35px;
+                padding: 20px 0;
+                background-color: $Orange;
+                -webkit-border-radius: 35px;
+                -moz-border-radius: 35px;
+                -ms-border-radius: 35px;
+                -o-border-radius: 35px;
+                border: none;
+                outline: none;
+                >span
+           
+{
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 34.55px;
+                    color: $white;
+                }
+            }
+            .RateC{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .Scores{
+                    width:50%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                     span{
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 34.55px;
+                        color: $white;
+                    }
+                }
+                .rating{
+                    display: flex;
+                    width: 50%;
+                    justify-content: center;
+                    overflow: hidden;
+                    flex-direction: row-reverse;
+                    position: relative;
+                    .rating-0 {
+                        filter: grayscale(100%);
+                    }
+                    > input {
+                        display: none;
+                      }
+                      > label {
+                        cursor: pointer;
+                        width: 40px;
+                        height: 40px;
+                        background-image: url('/images/solar_star-linear\ \(1\).svg');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 76%;
+                        transition: .3s;
+                      }
+                      > input:checked ~ label,
+                      > input:checked ~ label ~ label{
+                        background-image: url('/images/Vector\ \(16\).svg');
+                    }
+                      > input:not(:checked) ~ label:hover,
+                      > input:not(:checked) ~ label:hover ~ label{
+                        background-image: url('/images/Vector\ \(16\).svg')
+                    }
+                }
+                
+
+            }
+        }
+        .Course-Detail{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid $white;
+            padding: 15px;
+            >.Row{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: .5em;
+                padding: 10px 0;
+             .Icon{
+                width: 10%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+             }
+             .Content{
+                width: 90%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: .4em;
+                .Question,.Answer{
+                    width: auto;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+                .Question p,.Answer p{
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 34.55px;
+                    color: $white;
+                }
+             }
+             &-first{
+                .Icon,.Content{
+                    width: auto;
+                }  
+                justify-content: center;
+                gap: .5em;
+                margin-bottom: .8em;
+            }
+            }
+        }
+        .Course-Lecturer{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $white;
+            padding: 15px; 
+            gap: 1.5em;
+            .IMG-Lecturer{
+                width: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .Circle{
+                    width: 100%;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    min-height: 100px;
+                    overflow: hidden;
+                    >img{
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .Detaile-Lecturer{
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 1em;
+                .Name,.Det{
+                    width:auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                }
+                .Name{
+                  p{
+                    text-align: right;
+                    font-size: 36px;
+                    font-weight: 900;
+                    line-height: 62.18px;
+                    color: $white;
+                  }
+                }
+                .Det{
+                   p{
+                    text-align: right;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 34.55px;
+                    color: $white;
+                   }
+                }
+            }
+        }
+    }
+    .CoursesTextS{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .Box{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            >.IMG{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                > img{
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .Title{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                p{
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 41.45px;
+                    color: $white;
+                }
+            }
+            .Text{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                p{
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 41.45px;
+                    color: $white;
+                }
+            }
+            .VideoContainer{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-bottom: 2em;
+                margin-top: 5vh;
+                Video{
+                    width: 100%;
+                    object-fit: cover;
+                }
+                .Video{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    position: relative;
+                    flex-direction: column;
+                    overflow: hidden;
+                    :hover{
+                        cursor: pointer;
+                       }
+                       &.toggle .ov{
+                        left: -100%;
+                       }
+                   }
+                   .ov{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 5;
+                    transition: all .2s;
+                    pointer-events: none;
+                    background-color: #000000a1;
+                    -webkit-transition: all .2s;
+                    -moz-transition: all .2s;
+                    -ms-transition: all .2s;
+                    -o-transition: all .2s;
+                }
+              
+                   .play{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                   }
+                   .play:hover{
+                    cursor: pointer;
+                   }
+               }
+            .Courses-Videos-C{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start; 
+                border: 1px solid $white;
+                padding: 30px 25px;
+                .free{
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 41.45px;
+                    color: $Orange;
+                    margin-right: .8em;
+                }
+                >.Title{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start; 
+                    h2{
+                        font-size: 36px;
+                        font-weight: 900;
+                        line-height: 62.18px;
+                        color: $white;
+                    }
+                }
+                .Tabs-Container{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start; 
+                    .DropService{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start; 
+                    }
+                    .Service{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start; 
+                        padding: 20px 0;
+                        &:not(:last-child){
+                            border-bottom: 1px solid $white;
+                        }
+              
+                        .nav{
+                            width: 100%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-start; 
+                            gap: 2em;
+                            .Icon{
+                                width: auto;
+                                display: flex;
+                                justify-content:center;
+                                align-items: center; 
+                            }
+                            &.active{
+                                .Icon{
+                                    svg,path{
+                                        fill: $Orange;
+                                        stroke: $Orange;
+                                    }
+                                }
+                            
+                            }
+                            .Detail{
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                align-items: flex-start; 
+                                >.Titlee{
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: flex-start; 
+                                    p{
+                                        font-size: 24px;
+                                        font-weight: 700;
+                                        line-height: 41.45px;
+                                        color: $white;
+                                    }
+                                }
+                                >.Det{
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: flex-start;
+                                    flex-direction: column; 
+                                    p{
+                                        font-size: 20px;
+                                        font-weight: 400;
+                                        line-height: 34.55px;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+                        .DropMenu{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            align-items: flex-start; 
+                            .DropItem{
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                align-items: flex-start; 
+                            }
+                            Video{
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                            .Video{
+                                width: 100%;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                                position: relative;
+                                flex-direction: column;
+                                overflow: hidden;
+                                margin: 30px 0;
+                                :hover{
+                                    cursor: pointer;
+                                   }
+                                   &.toggle .ov{
+                                    left: -100%;
+                                   }
+                               }
+                               .ov{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                z-index: 5;
+                                transition: all .2s;
+                                pointer-events: none;
+                                background-color: #000000a1;
+                                -webkit-transition: all .2s;
+                                -moz-transition: all .2s;
+                                -ms-transition: all .2s;
+                                -o-transition: all .2s;
+                            }
+                          
+                               .play{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                               }
+                               .play:hover{
+                                cursor: pointer;
+                               }
+                        }
+                    }
+                    .SendContainer{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1em;
+                        margin-top: 2em;
+                        p{
+                            font-size: 24px;
+                            font-weight: 700;
+                            line-height: 41.45px;
+                            color: $Orange;
+                        }
+                        textarea{
+                            width: 100%;
+                            resize: none;
+                            border: 1px solid $white;
+                            color: $white;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+            .Related-Courses{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                border:  1px solid $white ;
+                padding: 30px 25px;
+                margin-top: 4em;
+                >.Title{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    h3{
+                        font-size: 36px;
+                        font-weight: 900;
+                        line-height: 62.18px;
+                        color: $white;
+                    }
+                }
+                >.Courses-slider{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    overflow: hidden;
+                    margin-top: 2em;
+                    .swiper-course{
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        .swiper-wrapper{
+                            width: 100%;
+                        }
+                        .swiper-slide{
+                            width: 100%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            >a{
+                                width: 100%;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                flex-direction: column;
+                                .IMG{
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    >img{
+                                        width: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                                .Desc{
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    .Tit{
+                                        width: 50%;
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: center;
+                                        p{
+                                            font-size: 36px;
+                                            font-weight: 900;
+                                            line-height: 62.18px;
+                                            color: $white;
+                                            text-align: right;
+                                        }
+                                    }
+                                    .det{
+                                        width: 50%;
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: flex-end;
+                                        flex-direction: column;
+                                        p{
+                                            font-size: 20px;
+                                            font-weight: 400;
+                                            line-height: 34.55px;
+                                            color: $white;
+                                            text-align: justify;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .Comments-C{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                border:  1px solid $white ;
+                padding: 30px 25px;
+                margin-top: 4em;
+                >.Title{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    h4{
+                        font-size: 36px;
+                        font-weight: 900;
+                        line-height: 62.18px;
+                        color: $white;
+                    }
+                } 
+                >.Courses-Comment{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .Comment{
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 1em;
+                    &:not(:last-child){
+                        .Content{
+                        border-bottom: 1px solid $white;
+                        }
+                    }
+                    .UserIcon{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .Circle{
+                            width: 65px;
+                            height: 65px;
+                            border-radius: 50%;
+                            background-color:$Gray;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+                        }
+                     
+} 
+                     .Content{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: .8em;
+                        padding: 40px 0;
+                     
+                        .Top{
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .Infos{
+                                width: auto;
+                                display: flex;
+                                flex-direction: column;
+                                .UserName{
+                                    width: auto;
+                                     display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    p{
+
+                                        font-size: 24px;
+                                        font-weight: 700;
+                                        line-height: 41.45px;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                            .Date{
+                                width: auto;
+                                display: flex;
+                               justify-content: space-between;
+                               align-items: center;
+                               span{
+
+                                   font-size: 20px;
+                                   font-weight: 400;
+                                   line-height: 34.55px;
+                                   color: $white;
+                               }
+                            }
+                        }
+                        .Bottom{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1em;
+                            .row{
+                                width: 100%;
+                                display: flex;
+                               justify-content: flex-start;
+                               gap: .8em;
+                               .Question,.Answer{
+                                width: auto;
+                                display: flex;
+                               justify-content: space-between;
+                               align-items: flex-start;
+   
+                               }
+                               .Question{
+                                width:max-content;
+                                display: flex;
+                               justify-content: flex-start;
+                               align-items: flex-start;
+                                p{
+                                    text-align: right;
+                                    font-size: 24px;
+                                    font-weight: 700;
+                                    line-height: 41.45px;
+                                    color: $white;
+                                    width: max-content;
+                                }
+                               }
+                               .Answer{
+                                width:100%;
+                                display: flex;
+                               justify-content: flex-start;
+                               align-items: flex-start;
+                                p{
+                                    text-align: right;
+                                    font-size: 20px;
+                                    font-weight: 400;
+                                    line-height: 34.55px;
+                                    color: $white;
+                                }
+                               }
+                            }
+                        }
+                     }
+                }
+
+                .rating{
+                    display: flex;
+                    width: 50%;
+                    justify-content: center;
+                    overflow: hidden;
+                    flex-direction: row-reverse;
+                    position: relative;
+                    .rating-0 {
+                        filter: grayscale(100%);
+                    }
+                    > input {
+                        display: none;
+                      }
+                      > label {
+                        cursor: pointer;
+                        width: 40px;
+                        height: 40px;
+                        background-image: url('/images/solar_star-linear\ \(1\).svg');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 76%;
+                        transition: .3s;
+                      }
+                      > input:checked ~ label,
+                      > input:checked ~ label ~ label{
+                        background-image: url('/images/Vector\ \(16\).svg');
+                    }
+                      > input:not(:checked) ~ label:hover,
+                      > input:not(:checked) ~ label:hover ~ label{
+                        background-image: url('/images/Vector\ \(16\).svg')
+                    }
+                }
+                
+            }
+        }
+      
+      
+    }
+
+}

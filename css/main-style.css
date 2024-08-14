@@ -27,6 +27,20 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  overflow-y: visible;
+  height: auto;
+  overflow-x: hidden !important;
+  margin: 0;
+  direction: ltr;
+  padding: 0;
+  font: inherit;
+  vertical-align: baseline;
+  line-height: 1;
+  direction: rtl;
+  font-family: "IRANYekan";
+}
+body.Dark {
+  background-color: #000000;
 }
 
 ol, ul {
@@ -46,6 +60,36 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+a:hover,
+a:focus,
+a:active,
+a:focus:active,
+a:active:focus,
+button:hover,
+button:focus,
+button:active,
+button:focus:active,
+button:active:focus,
+input:hover,
+input:focus,
+input:active,
+input:focus:active,
+input:active:focus,
+select:hover,
+select:focus,
+select:active,
+select:focus:active,
+select:active:focus,
+textarea:hover,
+textarea:focus,
+textarea:active,
+textarea:focus:active,
+textarea:active:focus {
+  text-decoration: unset;
+  box-shadow: unset;
+  outline: unset;
 }
 
 @font-face {
@@ -79,4 +123,123 @@ table {
   border-radius: 4px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #555;
+}
+
+a, ul, li {
+  text-decoration: none;
+  list-style: none;
+}
+
+* {
+  font-family: "IRANYekan";
+}
+
+header.Header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 65px 0px;
+  position: fixed;
+  left: 0;
+  z-index: 999;
+  top: 0;
+}
+header.Header > nav.Menu-container {
+  margin: 0 auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  background-color: black;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  padding: 10px 40px;
+}
+header.Header .L-Menu,
+header.Header .R-Menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header.Header .Menu-link {
+  width: auto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #fff;
+}
+header.Header .Logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header.Header .Logo a {
+  width: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+
+footer.Footer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.5019607843);
+}
+footer.Footer .Left {
+  width: 85%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+  margin-right: auto;
+}
+footer.Footer .Left .Logo {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer.Footer .Left span {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #fff;
+}
+footer.Footer .Right {
+  width: 85%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+}
+footer.Footer .Right .Socilas {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8em;
+}
+footer.Footer .Right .Socilas .Item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: auto;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3019607843);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+footer.Footer .Right .Socilas a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=main-style.css.map */
