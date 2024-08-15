@@ -1,8 +1,22 @@
+let progresBarContainer = document.querySelector(".progresBarContainer")
+let sliders = document.querySelectorAll(".swiper-slide")
+for (let i = 1; i < sliders.length; i++) {
+  const element = sliders[i];
+  let newprogressBar = document.createElement("div")
+  newprogressBar.classList.add("progresBar")
+  let newSpan = document.createElement("span")
+  
+  newprogressBar.appendChild(newSpan)
+  progresBarContainer.appendChild(newprogressBar)
+}
+
+
 const slider = document.getElementById("js-cta-slider");
-let progresBar = document.querySelector(".progresBar span");
+let progresBar = document.querySelectorAll(".progresBar");
 const interleaveOffset = 0.75;
 let progressList = document.querySelectorAll(".progressContainer ul li")
 progressList[0].classList.add("activeBar")
+let lastIndex = 0;
 const mySwiper = new Swiper(slider, {
   loop: false,
   direction: "vertical",
@@ -46,13 +60,23 @@ const mySwiper = new Swiper(slider, {
     },
 
     slideChangeTransitionStart: function () {
-      let count = 1 / (this.slides.length - 1);
+      if (this.activeIndex>lastIndex) {
+        progresBar[this.activeIndex-1].classList.add("activeBar");
+       lastIndex= this.activeIndex;
+       
+      }else{
+        progresBar[this.activeIndex].classList.remove("activeBar");
+        lastIndex= this.activeIndex
+
+      }
+      // let count = 1 / (this.slides.length - 1);
       $(".progressContainer ul li").removeClass("activeBar")
       progressList[this.activeIndex].classList.add("activeBar")
+      
       if (this.activeIndex == 0) {
-        progresBar.style.transform = `scaleY(${0})`;
+
       } else {
-        progresBar.style.transform = `scaleY(${this.activeIndex * count})`;
+        progresBar[this.activeIndex-1].classList.add("activeBar");
       }
     },
   },
