@@ -239,8 +239,14 @@
     right: 75px;
     bottom: 5vh;
     align-items: center;
-    .progresBar {
+    .progresBarContainer{
       height: calc(100% - 40px);
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+    }
+    .progresBar {
+      height: calc(50% - 10px);
       background-color: #FFFFFF33;
       width: 1px;
       position: relative;
@@ -249,13 +255,18 @@
         width: 1px;
         height: 100%;
         background-color: white;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+        // left: 0;
         transform-origin: top;
         transform: scaleY(0);
         transition: 1s ease;
+      }
+    }
+    .activeBar{
+      span{
+        transform: scaleY(1);
       }
     }
     ul {

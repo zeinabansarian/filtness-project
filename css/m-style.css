@@ -237,8 +237,14 @@
   bottom: 5vh;
   align-items: center;
 }
-.coursesCat .progressContainer .progresBar {
+.coursesCat .progressContainer .progresBarContainer {
   height: calc(100% - 40px);
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.coursesCat .progressContainer .progresBar {
+  height: calc(50% - 10px);
   background-color: rgba(255, 255, 255, 0.2);
   width: 1px;
   position: relative;
@@ -248,13 +254,12 @@
   width: 1px;
   height: 100%;
   background-color: white;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
   transform-origin: top;
   transform: scaleY(0);
   transition: 1s ease;
+}
+.coursesCat .progressContainer .activeBar span {
+  transform: scaleY(1);
 }
 .coursesCat .progressContainer ul {
   transform: translateY(-5px);
