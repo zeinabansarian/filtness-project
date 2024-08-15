@@ -147,7 +147,6 @@ a,ul,li{
 	text-decoration: none;
 	list-style: none;
 }
-
 *{
 	font-family: "IRANYekan";
 }
@@ -428,7 +427,6 @@ footer.Footer{
         }
     }
 }
-
 /* Animations */
   /* Bar's animation */
   @keyframes animate {
@@ -449,8 +447,6 @@ footer.Footer{
       opacity: 1;
     }
   }
-
-  
 
 main.CourseShow{
     overflow: hidden;
@@ -2211,6 +2207,288 @@ main.ProfileUser{
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+.Bascket-Popup{
+    width: 100vw;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1000;
+    background-color: $white;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    &.Open
+
+{
+        opacity: 1;
+        pointer-events: all;
+    }
+    .Container{
+        width: 90%;
+        display: flex;
+        margin: 0 auto;
+        flex-direction: column;
+        margin-top: 3em;
+        overflow-y: scroll;
+        .Top{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .Title{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: .8em;
+                @media only screen and (max-width: 800px) {
+                   width: 45%;
+                   }
+                   @media only screen and (max-width: 600px) {
+                  width: auto;
+                   }
+                span{
+                    width: 80%;
+                    font-size: 36px;
+                    font-weight: 900;
+                    line-height: 62.18px;
+                    color: $black;
+                    @media only screen and (max-width: 1000px) {
+                        font-size:20px;
+                       }
+                }
+                .Circle{
+                    width: 57px;
+                    border-radius: 50%;
+                    min-height: 57px;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    >img{
+                        min-height: 60px;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                    }
+}
+            }
+            .Close{
+                width: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .Ci{
+                    padding: 10px;
+                    border: 1px solid $black;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+}
+            }
+        }
+        .Basket-Items{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: .8em;
+            margin-top: 3em;
+            overflow-y: scroll;
+            .BasketItem{
+                width: 100%;
+                display: flex;
+                border: 1px solid $black;
+                padding: 20px 0;
+                     .Content{
+                        width: 90%;
+                        display: flex;
+                        margin: 0 auto;
+                        @media only screen and (max-width: 800px) {
+                           padding: 0;
+                           flex-direction: column;
+                            }
+                        .Top{
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            @media only screen and (max-width: 1000px) {
+                               flex-direction: column;
+                               }
+                            .Infos{
+
+                                width: auto;
+                                display: flex;
+                                flex-direction: column;
+                                @media only screen and (max-width: 1000px) {
+                                   width: 100%;
+                                    }
+                                .RateC{
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    .Scores{
+                                        width:50%;
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: center;
+                                         span{
+                                            font-size: 20px;
+                                            font-weight: 400;
+                                            line-height: 34.55px;
+                                            color:$black;
+                                            @media only screen and (max-width: 1000px) {
+                                                font-size: 10px;
+                                                line-height:20px;
+                                               }
+                                        }
+                                    }
+                                    .rating{
+                                        display: flex;
+                                        width: 50%;
+                                        justify-content: center;
+                                        overflow: hidden;
+                                        flex-direction: row-reverse;
+                                        position: relative;
+                                        @media only screen and (max-width: 1000px) {
+                                           justify-content: flex-start;
+                                            }
+                                        .rating-0 {
+                                            filter: grayscale(100%);
+                                        }
+                                        > input {
+                                            display: none;
+                                          }
+                                          > label {
+                                            cursor: pointer;
+                                            width: 40px;
+                                            height: 40px;
+                                            background-image: url('/images/bstar.svg');
+                                            background-repeat: no-repeat;
+                                            background-position: center;
+                                            background-size: 76%;
+                                            transition: .3s;
+                                          }
+                                          > input:checked ~ label,
+                                          > input:checked ~ label ~ label{
+                                            background-image: url('/images/Vector\ \(16\).svg');
+                                        }
+                                          > input:not(:checked) ~ label:hover,
+                                          > input:not(:checked) ~ label:hover ~ label{
+                                            background-image: url('/images/Vector\ \(16\).svg')
+                                        }
+                                    }
+                                    
+                    
+                                }
+                                .Name{
+                                    width: auto;
+                                     display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    p{
+
+                                        font-size: 36px;
+                                        font-weight: 900;
+                                        line-height: 62.18px;
+                                        color:$black;
+                                        @media only screen and (max-width: 1000px) {
+                                            font-size: 14px;
+                                            line-height:30px;
+                                           }
+                                    }
+
+                                }
+                            }
+                            .box{
+                                width: auto;
+                                display: flex;
+                               align-items: center;
+                               flex-direction: column;
+                               @media only screen and (max-width: 1000px) {
+                                flex-direction: row;
+                                width: 100%;
+                                }
+                               .PriceC{
+                                width: auto;
+                                display: flex;
+                               align-items: center;
+                               gap: .5em;
+                               .PriceM,.Price{
+                                width: auto;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                p{
+                                    font-size: 20px;
+                                    font-weight: 400;
+                                    line-height: 34.55px;
+                                    color: $black;
+                                    @media only screen and (max-width: 1000px) {
+                                        font-size: 10px;
+                                       }
+                                }
+                
+                            }
+                            .Price p{
+                                font-size: 36px;
+                                font-weight: 900;
+                                line-height: 62.18px;
+                                color: $black;
+                                @media only screen and (max-width: 1000px) {
+                                    font-size: 20px;
+                                   }
+                            }
+                               }
+                    .DeletItem{
+                        width: auto;
+                        display: flex;
+                       align-items: center;
+                       margin-right: auto;
+                       button{
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 34.55px;
+                        color: $black;
+                        background-color: transparent;
+                        border: none;
+                        outline: none;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                        @media only screen and (max-width: 1000px) {
+                            font-size: 10px;
+                           }
+                    }
+                    }
+                            }
+                        }
+                     
+                     }
+              
+        
             }
         }
     }

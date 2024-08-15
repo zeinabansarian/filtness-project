@@ -2311,4 +2311,302 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
     font-size: 10px;
     line-height: 20px;
   }
+}
+
+.Bascket-Popup {
+  width: 100vw;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  position: fixed;
+  z-index: 1000;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.8s ease;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+}
+.Bascket-Popup.Open {
+  opacity: 1;
+  pointer-events: all;
+}
+.Bascket-Popup .Container {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  margin-top: 3em;
+  overflow-y: scroll;
+}
+.Bascket-Popup .Container .Top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Bascket-Popup .Container .Top .Title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8em;
+}
+@media only screen and (max-width: 800px) {
+  .Bascket-Popup .Container .Top .Title {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .Bascket-Popup .Container .Top .Title {
+    width: auto;
+  }
+}
+.Bascket-Popup .Container .Top .Title span {
+  width: 80%;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 62.18px;
+  color: #000000;
+}
+@media only screen and (max-width: 1000px) {
+  .Bascket-Popup .Container .Top .Title span {
+    font-size: 20px;
+  }
+}
+.Bascket-Popup .Container .Top .Title .Circle {
+  width: 57px;
+  border-radius: 50%;
+  min-height: 57px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Bascket-Popup .Container .Top .Title .Circle > img {
+  min-height: 60px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.Bascket-Popup .Container .Top .Close {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Bascket-Popup .Container .Top .Close .Ci {
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.Bascket-Popup .Container .Basket-Items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  margin-top: 3em;
+  overflow-y: scroll;
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem {
+  width: 100%;
+  display: flex;
+  border: 1px solid #000000;
+  padding: 20px 0;
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 800px) {
+  .Bascket-Popup .Container .Basket-Items .BasketItem .Content {
+    padding: 0;
+    flex-direction: column;
+  }
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 1000px) {
+  .Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top {
+    flex-direction: column;
+  }
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 1000px) {
+  .Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos {
+    width: 100%;
+  }
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos .RateC {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos .RateC .Scores {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos .RateC .Scores span {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #000000;
+}
+@media only screen and (max-width: 1000px) {
+  .Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos .RateC .Scores span {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos .RateC .rating {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: row-reverse;
+  position: relative;
+}
+@media only screen and (max-width: 1000px) {
+  .Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos .RateC .rating {
+    justify-content: flex-start;
+  }
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos .RateC .rating .rating-0 {
+  filter: grayscale(100%);
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos .RateC .rating > input {
+  display: none;
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos .RateC .rating > label {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-image: url("/images/bstar.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 76%;
+  transition: 0.3s;
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos .RateC .rating > input:checked ~ label,
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos .RateC .rating > input:checked ~ label ~ label {
+  background-image: url("/images/Vector (16).svg");
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos .RateC .rating > input:not(:checked) ~ label:hover,
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos .RateC .rating > input:not(:checked) ~ label:hover ~ label {
+  background-image: url("/images/Vector (16).svg");
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos .Name {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos .Name p {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 62.18px;
+  color: #000000;
+}
+@media only screen and (max-width: 1000px) {
+  .Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .Infos .Name p {
+    font-size: 14px;
+    line-height: 30px;
+  }
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .box {
+  width: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media only screen and (max-width: 1000px) {
+  .Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .box {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .box .PriceC {
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .box .PriceC .PriceM, .Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .box .PriceC .Price {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .box .PriceC .PriceM p, .Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .box .PriceC .Price p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #000000;
+}
+@media only screen and (max-width: 1000px) {
+  .Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .box .PriceC .PriceM p, .Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .box .PriceC .Price p {
+    font-size: 10px;
+  }
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .box .PriceC .Price p {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 62.18px;
+  color: #000000;
+}
+@media only screen and (max-width: 1000px) {
+  .Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .box .PriceC .Price p {
+    font-size: 20px;
+  }
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .box .DeletItem {
+  width: auto;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .box .DeletItem button {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #000000;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .box .DeletItem button:hover {
+  cursor: pointer;
+}
+@media only screen and (max-width: 1000px) {
+  .Bascket-Popup .Container .Basket-Items .BasketItem .Content .Top .box .DeletItem button {
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=main-style.css.map */
