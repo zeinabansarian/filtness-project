@@ -110,7 +110,7 @@
           text-align: right;
         }
       }
-      .social{
+      .social {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -123,20 +123,179 @@
           line-height: 41.45px;
           text-align: right;
         }
-        ul{
+        ul {
+          display: flex;
+          align-items: center;
+          column-gap: 30px;
+          a {
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
-            column-gap: 30px;
-            a{
-                width: 40px;
-                height: 40px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 50%;
-                border: 2px solid #0000004D;
-            }
+            justify-content: center;
+            border-radius: 50%;
+            border: 2px solid #0000004d;
+          }
         }
+      }
+    }
+  }
+}
+.coursesCat {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  .swiper-slide-active {
+    z-index: 3;
+  }
+
+  .cta {
+    padding: 12% 0;
+  }
+  .cta__slider-wrapper {
+    position: relative;
+    width: 100%;
+    float: left;
+    height: 100vh;
+  }
+  .cta__slider-wrapper .block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+  .cta__slider {
+    min-height: 50vh;
+  }
+  .cta__slider .swiper-slide {
+    overflow: hidden;
+  }
+  .cta__slider-arrows {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  .cta__slider-arrow {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+  }
+  .cta__slider-arrow.cta__slider-arrow--previous {
+    left: 0;
+  }
+  .cta__slider-arrow.cta__slider-arrow--next {
+    left: 50%;
+  }
+  .cta__slider-item {
+    position: relative;
+  }
+  .cta__slider-item .media-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+  .cta__slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .cta__slider-counter {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    padding: 20px 40px;
+    color: #ffffff;
+  }
+  .cta__cta {
+    padding-top: 12%;
+    max-width: 480px;
+  }
+
+  .swiper-slide .container {
+    padding: 0;
+    width: 100%;
+  }
+
+  .progressContainer {
+    height: 74.388vh;
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    direction: rtl;
+    right: 75px;
+    bottom: 5vh;
+    align-items: center;
+    .progresBar {
+      height: calc(100% - 40px);
+      background-color: #FFFFFF33;
+      width: 1px;
+      position: relative;
+      span {
+        display: block;
+        width: 1px;
+        height: 100%;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: 1s ease;
+      }
+    }
+    ul {
+      transform: translateY(-5px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      li {
+        position: relative;
+        transform: translateX(6.5px);
+        cursor: pointer;
+        opacity: 0.5;
+        transition: 0.8s ease;
+        span {
+          margin-right: 17px;
+          //styleName: 24/b;
+          font-family: IRANYekan;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 41.45px;
+          text-align: center;
+          color: white;
+        }
+      }
+      li::before {
+        content: "";
+        display: inline-block;
+        // background-color: white;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        transition: 0.5s ease;
+        border: 1px solid white;
+      }
+      .activeBar::before{
+        background-color: white;
+      }
+      .activeBar{
+        opacity: 1;
       }
     }
   }
