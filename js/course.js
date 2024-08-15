@@ -55,5 +55,24 @@ let swiperCourse= new Swiper(".swiper-course", {
     centeredSlides: true,
     loop:true,
     grabCursor:true,
-
+    breakpoints: {
+      // when window width is >= 320px
+      220: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 40
+      },
+      1000: {
+        slidesPerView:1.7,
+          spaceBetween: 40
+        },
+        2000: {
+          slidesPerView: 2.8,
+          spaceBetween: 40
+        }
+    }
   }); 
