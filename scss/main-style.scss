@@ -2315,6 +2315,7 @@ main.ProfileUser{
             gap: .8em;
             margin-top: 3em;
             overflow-y: scroll;
+            overflow-x: hidden;
             .BasketItem{
                 width: 100%;
                 display: flex;

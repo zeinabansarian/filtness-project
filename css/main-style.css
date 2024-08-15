@@ -2423,6 +2423,7 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   gap: 0.8em;
   margin-top: 3em;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .Bascket-Popup .Container .Basket-Items .BasketItem {
   width: 100%;
