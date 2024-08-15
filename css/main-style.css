@@ -1709,10 +1709,10 @@ main.ProfileUser .Containers .navBox .Item .AnchorLink {
     line-height: 15px;
   }
 }
-main.ProfileUser .Containers .navBox .Item.active .AnchorLink {
+main.ProfileUser .Containers .navBox .Item .AnchorLink.active {
   color: #FF7B00;
 }
-main.ProfileUser .Containers .navBox .Item.active .AnchorLink::before {
+main.ProfileUser .Containers .navBox .Item .AnchorLink.active::before {
   position: absolute;
   content: "";
   bottom: 0;

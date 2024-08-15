@@ -22,7 +22,7 @@ defOP.forEach((d)=>{
    })
 })
 })
-
+document.querySelector('.navBox .Item a[href*=one]').classList.add('active')
 let btns  = document.querySelectorAll('.navBox .Item')
 btns.forEach(btn=>{
     btn.addEventListener('click',(e)=>{
@@ -31,4 +31,22 @@ btns.forEach(btn=>{
         }
       e.currentTarget.classList.add('active')
     })
+})
+let sections = document.querySelectorAll('.Sec')
+window.addEventListener('scroll',(e)=>{
+             // change active menu on scroll        
+             let scrTop = window.scrollY  
+             sections.forEach(sec =>{
+                let top = scrTop;
+                let offset = sec.offsetTop-200;
+                let height= sec.offsetHeight;
+                let id =sec.getAttribute('id')
+                if(top>= offset && top < offset + height){
+                btns.forEach(btn=>{         
+                btn.querySelector('a').classList.remove('active');
+               document.querySelector('.navBox .Item a[href*='+id + ']').classList.add('active')
+             })
+     
+             }
+        })
 })
