@@ -78,6 +78,7 @@ main.CourseShow{
                    color: $white;
                    @media only screen and (max-width: 1000px) {
                     font-size: 20px;
+
                    }
                 }
             }
@@ -125,6 +126,7 @@ main.CourseShow{
                 color: $white;
                 @media only screen and (max-width: 1000px) {
                     font-size: 10px;
+                    line-height:20px;
                    }
             }
         }
@@ -221,6 +223,7 @@ main.CourseShow{
                     color: $white;
                     @media only screen and (max-width: 1000px) {
                         font-size: 10px;
+                        line-height:20px;
                        }
                 }
             }
@@ -241,6 +244,7 @@ main.CourseShow{
                         color: $white;
                         @media only screen and (max-width: 1000px) {
                             font-size: 10px;
+                            line-height:20px;
                            }
                     }
                 }
@@ -320,6 +324,7 @@ main.CourseShow{
                     color: $white;
                     @media only screen and (max-width: 1000px) {
                         font-size: 10px;
+                        line-height:20px;
                        }
                 }
              }
@@ -406,6 +411,7 @@ main.CourseShow{
                     color: $white;
                     @media only screen and (max-width: 1000px) {
                         font-size: 10px;
+                        line-height:20px;
                        }
                    }
                 }
@@ -442,6 +448,7 @@ main.CourseShow{
                     color: $white;
                     @media only screen and (max-width: 1000px) {
                         font-size: 14px;
+                        line-height:30px;
                        }
                 }
 
@@ -459,6 +466,7 @@ main.CourseShow{
                     color: $white;
                     @media only screen and (max-width: 1000px) {
                         font-size: 10px;
+                        line-height:20px;
                        }
                 }
             }
@@ -532,6 +540,7 @@ main.CourseShow{
                     margin-right: .8em;
                     @media only screen and (max-width: 1000px) {
                         font-size: 14px;
+                        line-height:30px;
                        }
                 }
                 >.Title{
@@ -616,6 +625,7 @@ main.CourseShow{
                                         color: $white;
                                         @media only screen and (max-width: 1000px) {
                                             font-size: 14px;
+                                            line-height:30px;
                                            }
                                     }
                                 }
@@ -632,6 +642,7 @@ main.CourseShow{
                                         color: $white;
                                         @media only screen and (max-width: 1000px) {
                                             font-size: 10px;
+                                            line-height:20px;
                                            }
                                     }
                                 }
@@ -712,6 +723,7 @@ main.CourseShow{
                             color: $Orange;
                             @media only screen and (max-width: 1000px) {
                                 font-size: 14px;
+                                line-height:30px;
                                }
                         }
                         textarea{
@@ -817,6 +829,7 @@ main.CourseShow{
                                             text-align: justify;
                                             @media only screen and (max-width: 1000px) {
                                                 font-size: 10px;
+                                                line-height:20px;
                                                }
                                         }
                                     }
@@ -845,6 +858,8 @@ main.CourseShow{
                         color: $white;
                         @media only screen and (max-width: 1000px) {
                             font-size: 20px;
+                            
+                            
                            }
                     }
                 } 
@@ -919,6 +934,7 @@ main.CourseShow{
                                         color: $white;
                                         @media only screen and (max-width: 1000px) {
                                             font-size: 14px;
+                                            line-height:30px;
                                            }
                                     }
 
@@ -937,6 +953,7 @@ main.CourseShow{
                                    color: $white;
                                    @media only screen and (max-width: 1000px) {
                                     font-size: 10px;
+                                    line-height:20px;
                                    }
                                }
                             }
@@ -977,6 +994,7 @@ main.CourseShow{
                                     width: max-content;
                                     @media only screen and (max-width: 1000px) {
                                         font-size: 14px;
+                                        line-height:30px;
                                        }
                                 }
                                }
@@ -993,6 +1011,7 @@ main.CourseShow{
                                     color: $white;
                                     @media only screen and (max-width: 1000px) {
                                         font-size: 10px;
+                                        line-height:20px;
                                        }
                                 }
                                }
@@ -1041,3 +1060,712 @@ main.CourseShow{
     }
 
 }
+main.ProfileUser{
+    width: 100%;
+    .Containers{
+        margin: 0 auto;
+        width: 90%;
+        display: grid;
+        grid-template-columns:25% 75%;
+        margin-top: 13em;
+        gap: 1.2em;
+        padding-bottom: 5em;
+        @media only screen and (max-width: 800px) {
+            display: flex;
+            flex-direction: column;
+           }
+        .Right{
+            width: 100%;
+            display: flex;
+            position: sticky;
+            height: fit-content;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            border: 1px solid $black;
+            top: 10em;
+            border-radius: 8px;
+          
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            -ms-border-radius: 8px;
+            -o-border-radius: 8px;
+            @media only screen and (max-width: 800px) {
+              background-color: $white;
+              z-index: 100;
+              flex-direction: row;
+              top: 6em;
+               }
+        }
+        .UserInfoBox{
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            @media only screen and (max-width: 800px) {
+                flex-direction: row;
+                width: 100%;
+               }
+               @media only screen and (max-width: 600px) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+               }
+            .Title{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: .8em;
+                @media only screen and (max-width: 800px) {
+                   width: 45%;
+                   }
+                   @media only screen and (max-width: 600px) {
+                  width: auto;
+                   }
+                h1{
+                    width: 80%;
+                    font-size: 36px;
+                    font-weight: 900;
+                    line-height: 62.18px;
+                    color: $black;
+                    @media only screen and (max-width: 1000px) {
+                        font-size:20px;
+                       }
+                }
+                .Circle{
+                    width: 57px;
+                    border-radius: 50%;
+                    min-height: 57px;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    >img{
+                        min-height: 60px;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                    }
+}
+            }
+        }
+        .navBox{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 1em;
+            margin-top: 1.5em;
+            @media only screen and (max-width: 1000px) {
+              gap: 1em;
+              justify-content: flex-end;
+              flex-direction: row;
+              width: 100%;
+               }
+               @media only screen and (max-width: 600px) {
+                justify-content: center;
+                align-items: center;
+               }
+            .Item{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                position: relative;
+                @media only screen and (max-width: 800px) {
+                  width: auto;
+                   }
+                .AnchorLink{
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 34.55px;
+                    color: $black;
+                    position: relative;
+                    transition: all .5s ease;
+                    -webkit-transition: all .5s ease;
+                    -moz-transition: all .5s ease;
+                    -ms-transition: all .5s ease;
+                    -o-transition: all .5s ease;
+                    @media only screen and (max-width: 1000px) {
+                        font-size: 10px;
+                        line-height: 15px;
+                       }
+}
+                &.active{
+                    .AnchorLink{
+                        color: $Orange;
+                        &::before{
+                            position: absolute;
+                            content: '';
+                            bottom: 0;
+                            left: 0;
+                            z-index: 1;
+                            width: 100%;
+                            height: 1px;
+                            background-color: $Orange;
+                        }
+                    }
+                }
+            }
+        }
+        .Left{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .Boxes{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+            }
+            .Sec{
+            border-radius: 8px;
+          
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            -ms-border-radius: 8px;
+            -o-border-radius: 8px;
+            >.title{
+                    width:95%;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                
+                    p{
+                        text-align: right;
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 41.45px;
+                        color: $black;
+                        @media only screen and (max-width: 1000px) {
+                            font-size: 14px;
+                           }
+                    }
+                }
+                >.text{
+                    width:95%;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    p{
+                        text-align: right;
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 34.55px;
+                        color: $black;
+                        @media only screen and (max-width: 1000px) {
+                            font-size: 10px;
+                            line-height:20px;
+                           }
+                    }
+
+                }
+            }
+            .Section-1{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid $black;
+                padding: 3em 0;
+                @media only screen and (max-width: 1000px) {
+                   padding: .8em 0;
+                   }
+                .skills-bar {
+                    width:95%;
+                    margin: 0 auto;
+                    border-radius:10px;
+                    gap: 1em;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: .8em;
+                   
+                      .bar .info {
+                        margin-bottom: 5px;
+                        display: flex;
+                        justify-content: space-between;
+                        >span {
+                            font-weight: 900;
+                            font-size:36px;
+                            line-height: 62.18px;
+                            opacity: 0;
+                            animation: showText .5s 1s linear forwards;
+                            @media only screen and (max-width: 1000px) {
+                                font-size: 20px;
+                                line-height:30px;
+                               }
+                          }
+                        .Box{
+                            display: flex;
+                            justify-content: flex-end;
+                            gap: 1.2em;
+                            span{
+                                font-weight: 400;
+                                font-size:20px;
+                                line-height: 34.55px;
+                                opacity: 0;
+                                animation: showText2 .5s 1.5s linear forwards;
+                                @media only screen and (max-width: 1000px) {
+                                    font-size: 10px;
+                                    line-height:20px;
+                                   }
+                              }
+                          }
+                      }
+                      .bar{
+                        .progress-line {
+                            height: 10px;
+                            width: 100%;
+                            background: $Gray;
+                            position: relative;
+                            transform: scaleX(0);
+                            transform-origin:left;
+                            border-radius:10px;
+                            animation:animate 1s cubic-bezier(1,0,.5,1) forwards;
+                            span {
+                                height: 100%;
+                                position: absolute;
+                                border-radius:10px;
+                                transform:scaleX(0);
+                                transform-origin:right;
+                                background: $Orange;
+                                animation: animate 1s 1s cubic-bezier(1,0,.5,1) forwards;
+                              }
+                          }
+
+                      }
+                  }
+            }
+            .Section-2{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid $black;
+                padding: 3em 0;
+                @media only screen and (max-width: 1000px) {
+                    padding: .8em 0;
+                    }
+                .Inner{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: .8em;
+                    .Btn{
+                        width: max-content;
+                        padding: 14px 90px;
+                        background-color: $Orange;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 35px;
+                        -webkit-border-radius: 35px;
+                        -moz-border-radius: 35px;
+                        -ms-border-radius: 35px;
+                        -o-border-radius: 35px;
+                        color: $white;
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 400;
+                        margin-right: auto;
+                        line-height: 34.55px;
+                        margin-left: 3%;
+                        margin-top: 30px;
+                        transition: all .5s ease;
+                        -webkit-transition: all .5s ease;
+                        -moz-transition: all .5s ease;
+                        -ms-transition: all .5s ease;
+                        -o-transition: all .5s ease;
+                        @media only screen and (max-width: 1000px) {
+                            font-size: 10px;
+                            line-height:20px;
+                           }
+                           @media only screen and (max-width: 600px) {
+                           margin: 0 auto;
+                            }
+                        &:hover{
+                            background-color: transparent;
+                            color:$black;
+                            border: 1px solid  $Orange;
+                        }
+}
+
+                }
+                .SelectBoxes{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2vh;
+                    .select_wrap{
+                        width: 100%;
+                        min-height: 44px;
+                        margin: 15px auto;
+                        position: relative;
+                        user-select: none;
+    
+                       
+                        &.active .default_option:before {
+                            top: 25px;
+                            transform: rotate(-225deg);
+                        }
+                        .option{
+                            display: flex;
+                            align-items: center;
+                            p{
+                                font-size: 20px;
+                                font-weight: 400;
+                                line-height: 34.55px;
+                                color: $black;
+                                @media only screen and (max-width: 1000px) {
+                                    font-size: 10px;
+                                    line-height:20px;
+                                   }
+                             
+                            }
+                            .icon{
+                                background: url('https://i.imgur.com/oEZu0sK.png') no-repeat 0 0;
+                                  width: 32px;
+                                  height: 32px;
+                                margin-right: 15px;
+                              }
+                          }
+                          &.active .select_ul {
+                            display: block;
+                        }
+                        .select_ul{
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            right: 0;
+                            width: 95%;
+                            margin: 0 auto;
+                            margin-top: .5em;
+                            background:$white;
+                            border-radius: 5px;
+                            display: none;
+                            z-index: 2;
+                            border: 1px solid $black;
+                          
+                          
+                            li{
+                                font-size: 20px;
+                                font-weight: 400;
+                                line-height: 34.55px;
+                                color: $black;
+                                padding: 10px 1em;
+                                
+                                cursor: pointer;
+                                @media only screen and (max-width: 1000px) {
+                                    font-size: 10px;
+                                    line-height:20px;
+                                   }
+    
+                                &:first-child:hover{
+                                    border-top-left-radius: 5px;
+                                    border-top-right-radius: 5px;
+                                  }
+                                  &:last-child:hover{
+                                    border-bottom-left-radius: 5px;
+                                    border-bottom-right-radius: 5px;
+                                  }
+                                  &:hover{
+                                    background:$Orange;
+                             
+                                       color:$white !important;
+                                       p{
+                                   
+                             
+                                        color:$white !important;
+                                     
+                                   }
+                                  }
+                                  
+                              }
+                          }
+                      }
+                      .default_option{
+                        min-height: 44px;
+                        border-radius: 5px;
+                        background:$white;
+                        position: relative;
+                        cursor: pointer;
+                        width: 95%;
+                        margin: 0 auto;
+                        border: 1px solid $black;
+                        border-radius: 8px;
+                        -webkit-border-radius: 8px;
+                        -moz-border-radius: 8px;
+                        -ms-border-radius: 8px;
+                        -o-border-radius: 8px;
+                        &::before
+                    
+{
+                            content: "";
+                            position: absolute;
+                            top: 18px;
+                            left: 30px;
+                            width: 20px;
+                            height: 20px;
+                            border: 2px solid;
+                            border-color: transparent transparent #555555 #555555;
+                            transform: rotate(-45deg);
+                            @media only screen and (max-width: 1000px) {
+                               top: 14px;
+                               width: 10px;
+                               height: 10px;
+                               }
+                        }
+                        >li{
+                            min-height: 44px;
+                            border-radius: 8px;
+                            -webkit-border-radius: 8px;
+                            -moz-border-radius: 8px;
+                            -ms-border-radius: 8px;
+                            -o-border-radius: 8px;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-content: center;
+                            align-items: center;
+                            padding: 10px 0;
+                            padding-right: .5em;
+                            @media only screen and (max-width: 1000px) {
+                              padding: 0 ;
+                              padding-right: .5em;
+                               }
+                     
+                        }
+                      }
+                     
+                }
+            }
+            .Section-3{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid $black;
+                padding: 3em 0;
+                @media only screen and (max-width: 1000px) {
+                    padding: .8em 0;
+                    }
+                .Inner-pr{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 1.5em;
+                    gap: .8em;
+                 
+                    .Prr{
+                        width: 95%;
+                        margin: 0 auto;
+                        padding: 10px  0;
+                        padding-right: .5em;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        border: 1px solid $black;
+                        border-radius: 8px;
+                        -webkit-border-radius: 8px;
+                        -moz-border-radius: 8px;
+                        -ms-border-radius: 8px;
+                        -o-border-radius: 8px;
+                        @media only screen and (max-width: 600px) {
+                          padding-right: 0;
+                            }
+                        a{
+                            width:100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+}
+                    .Des{
+                        width: auto;
+                        display: flex;
+                        justify-content:flex-start;
+                        align-items: center;
+                        @media only screen and (max-width: 600px) {
+                           margin-right: 10px;
+                            }
+
+                        p{
+                            text-align: right;
+                            font-size: 20px;
+                            font-weight: 400;
+                            line-height: 34.55px;
+                            color: $black;
+                            @media only screen and (max-width: 1000px) {
+                                font-size: 10px;
+                                line-height:20px;
+                               }
+                        }
+                    }
+                    .Det{
+                        width: auto;
+                        display: flex;
+                        justify-content:flex-end;
+                        align-items: center;
+                        gap: .8em;
+                        margin-left: 3%;
+                        .Date{
+                            width: auto;
+                            display: flex;
+                            justify-content:center;
+                            align-items: center;
+                            p{
+                                text-align: right;
+                                font-size: 20px;
+                                font-weight: 400;
+                                line-height: 34.55px;
+                                color:#00000080;
+                                @media only screen and (max-width: 1000px) {
+                                    font-size: 10px;
+                                    line-height:20px;
+                                   }
+                            }
+                        }
+                        .Icon{
+                            width: auto;
+                            display: flex;
+                            justify-content:center;
+                            align-items: center;
+                        }
+                    }
+                    
+                }
+            }
+            .Section-4{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid $black;
+                padding: 3em 0;
+                @media only screen and (max-width: 1000px) {
+                    padding: .8em 0;
+                    }
+                >.title{
+                    justify-content: space-between;
+                    .Date{
+                        color: #00000080;
+                        text-align: right;
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 34.55px;
+                        @media only screen and (max-width: 1000px) {
+                            font-size: 10px;
+                            line-height:20px;
+                           }
+                    }
+                }
+                .Btn{
+                    width: max-content;
+                    padding: 14px 90px;
+                    background-color: transparent;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 35px;
+                    -webkit-border-radius: 35px;
+                    -moz-border-radius: 35px;
+                    -ms-border-radius: 35px;
+                    -o-border-radius: 35px;
+                    color: $black;
+                    text-align: center;
+                    transition: all .5s ease;
+                    -webkit-transition: all .5s ease;
+                    -moz-transition: all .5s ease;
+                    -ms-transition: all .5s ease;
+                    -o-transition: all .5s ease;
+                    font-size: 20px;
+                    font-weight: 400;
+                    margin-right: auto;
+                    line-height: 34.55px;
+                    margin-left: 3%;
+                    margin-top: 30px;
+                    border: 1px solid  $Orange;
+                    @media only screen and (max-width: 1000px) {
+                        font-size: 10px;
+                        line-height:20px;
+                       }
+                       @media only screen and (max-width: 600px) {
+                        margin: 0 auto;
+                        margin-top: 30px;
+                         }
+                    &:hover{
+                        background-color: $Orange;
+                        color: $white;
+                    }
+}
+                form{
+                    width: 95%;
+                    margin: 0 auto;
+                    display: flex;
+                    gap: .5em;
+                    justify-content: center;
+                    margin-top: 2em;
+                    @media only screen and (max-width: 600px) {
+                       flex-direction: column;
+                       }
+                    .Col{
+
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: .8em;
+                        @media only screen and (max-width: 600px) {
+                            width: 100%;
+                            }
+                        .InputBox{
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                        }
+                        input{
+                            width: 100%;
+                            padding: 10px 0;
+                            color: $black;
+                            text-align: right;
+                            font-size: 20px;
+                            font-weight: 400;
+                            line-height: 34.55px;
+                            outline: none;
+                            border: 1px solid $black;
+                            border-radius: 8px;
+                            -webkit-border-radius: 8px;
+                            -moz-border-radius: 8px;
+                            -ms-border-radius: 8px;
+                            -o-border-radius: 8px;
+                            padding-right: .8em;
+                            @media only screen and (max-width: 1000px) {
+                                font-size: 10px;
+                                line-height:20px;
+                               }
+                            
+                            &::placeholder,
+                            &:placeholder-shown{
+                                font-size: 20px;
+                                opacity: 1;
+                                font-weight: 400;
+                                line-height: 34.55px;
+                                color: $black;
+                                @media only screen and (max-width: 1000px) {
+                                    font-size: 10px;
+                                    line-height:20px;
+                                   }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+  
