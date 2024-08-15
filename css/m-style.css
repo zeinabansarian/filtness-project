@@ -138,4 +138,159 @@
   justify-content: center;
   border-radius: 50%;
   border: 2px solid rgba(0, 0, 0, 0.3019607843);
+}
+
+.coursesCat {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.coursesCat .swiper-slide-active {
+  z-index: 3;
+}
+.coursesCat .cta {
+  padding: 12% 0;
+}
+.coursesCat .cta__slider-wrapper {
+  position: relative;
+  width: 100%;
+  float: left;
+  height: 100vh;
+}
+.coursesCat .cta__slider-wrapper .block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.coursesCat .cta__slider {
+  min-height: 50vh;
+}
+.coursesCat .cta__slider .swiper-slide {
+  overflow: hidden;
+}
+.coursesCat .cta__slider-arrows {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.coursesCat .cta__slider-arrow {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+.coursesCat .cta__slider-arrow.cta__slider-arrow--previous {
+  left: 0;
+}
+.coursesCat .cta__slider-arrow.cta__slider-arrow--next {
+  left: 50%;
+}
+.coursesCat .cta__slider-item {
+  position: relative;
+}
+.coursesCat .cta__slider-item .media-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.coursesCat .cta__slider-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.coursesCat .cta__slider-counter {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  padding: 20px 40px;
+  color: #ffffff;
+}
+.coursesCat .cta__cta {
+  padding-top: 12%;
+  max-width: 480px;
+}
+.coursesCat .swiper-slide .container {
+  padding: 0;
+  width: 100%;
+}
+.coursesCat .progressContainer {
+  height: 74.388vh;
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  direction: rtl;
+  right: 75px;
+  bottom: 5vh;
+  align-items: center;
+}
+.coursesCat .progressContainer .progresBar {
+  height: calc(100% - 40px);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 1px;
+  position: relative;
+}
+.coursesCat .progressContainer .progresBar span {
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: 1s ease;
+}
+.coursesCat .progressContainer ul {
+  transform: translateY(-5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.coursesCat .progressContainer ul li {
+  position: relative;
+  transform: translateX(6.5px);
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.8s ease;
+}
+.coursesCat .progressContainer ul li span {
+  margin-right: 17px;
+  font-family: IRANYekan;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 41.45px;
+  text-align: center;
+  color: white;
+}
+.coursesCat .progressContainer ul li::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: 0.5s ease;
+  border: 1px solid white;
+}
+.coursesCat .progressContainer ul .activeBar::before {
+  background-color: white;
+}
+.coursesCat .progressContainer ul .activeBar {
+  opacity: 1;
 }/*# sourceMappingURL=m-style.css.map */
