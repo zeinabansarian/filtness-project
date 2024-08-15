@@ -1664,14 +1664,19 @@ main.ProfileUser .Containers .navBox {
   main.ProfileUser .Containers .navBox {
     gap: 1em;
     justify-content: flex-end;
-    flex-direction: row;
     width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  main.ProfileUser .Containers .navBox {
+    flex-direction: row;
   }
 }
 @media only screen and (max-width: 600px) {
   main.ProfileUser .Containers .navBox {
     justify-content: center;
     align-items: center;
+    flex-direction: row;
   }
 }
 main.ProfileUser .Containers .navBox .Item {
@@ -2426,10 +2431,11 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   overflow-x: hidden;
 }
 .Bascket-Popup .Container .Basket-Items .BasketItem {
-  width: 100%;
+  width: 99%;
   display: flex;
   border: 1px solid #000000;
   padding: 20px 0;
+  margin: 0 auto;
 }
 .Bascket-Popup .Container .Basket-Items .BasketItem .Content {
   width: 90%;
