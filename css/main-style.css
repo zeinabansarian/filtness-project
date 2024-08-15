@@ -582,7 +582,6 @@ main.CourseShow .Containers {
   display: grid;
   grid-template-columns: 65% 35%;
   margin: 2em auto;
-  gap: 2em;
 }
 @media only screen and (max-width: 800px) {
   main.CourseShow .Containers {
@@ -882,9 +881,10 @@ main.CourseShow .CoursesTextS {
   flex-direction: column;
 }
 main.CourseShow .CoursesTextS .Box {
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: column;
+  margin-left: auto;
 }
 main.CourseShow .CoursesTextS .Box > .IMG {
   width: 100%;
