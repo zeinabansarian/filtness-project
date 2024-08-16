@@ -219,6 +219,7 @@ header.Header{
         -moz-transition: all .5s ease;
         -ms-transition: all .5s ease;
         -o-transition: all .5s ease;
+        cursor: pointer;
         &:hover
        
 {
@@ -2327,6 +2328,7 @@ main.ProfileUser{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                cursor: pointer;
                 .Ci{
                     padding: 10px;
                     border: 1px solid $black;
@@ -2344,8 +2346,8 @@ main.ProfileUser{
             flex-direction: column;
             gap: .8em;
             margin-top: 3em;
-            overflow-y: scroll;
-            overflow-x: hidden;
+            // overflow-y: scroll;
+            // overflow-x: hidden;
             .BasketItem{
                 width:99%;
                 display: flex;
