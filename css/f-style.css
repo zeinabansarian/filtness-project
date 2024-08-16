@@ -133,6 +133,7 @@ main.CourseShow .BroadCrumbs ul .nav-Link {
 @media only screen and (max-width: 1000px) {
   main.CourseShow .BroadCrumbs ul .nav-Link {
     font-size: 10px;
+    line-height: 20px;
   }
 }
 main.CourseShow .Containers {
@@ -236,6 +237,7 @@ main.CourseShow .FixedSection .basket-Item button.AddTOBasket > span {
 @media only screen and (max-width: 1000px) {
   main.CourseShow .FixedSection .basket-Item button.AddTOBasket > span {
     font-size: 10px;
+    line-height: 20px;
   }
 }
 main.CourseShow .FixedSection .basket-Item .RateC {
@@ -259,6 +261,7 @@ main.CourseShow .FixedSection .basket-Item .RateC .Scores span {
 @media only screen and (max-width: 1000px) {
   main.CourseShow .FixedSection .basket-Item .RateC .Scores span {
     font-size: 10px;
+    line-height: 20px;
   }
 }
 main.CourseShow .FixedSection .basket-Item .RateC .rating {
@@ -340,6 +343,7 @@ main.CourseShow .FixedSection .Course-Detail > .Row .Content .Question p, main.C
 @media only screen and (max-width: 1000px) {
   main.CourseShow .FixedSection .Course-Detail > .Row .Content .Question p, main.CourseShow .FixedSection .Course-Detail > .Row .Content .Answer p {
     font-size: 10px;
+    line-height: 20px;
   }
 }
 main.CourseShow .FixedSection .Course-Detail > .Row-first {
@@ -429,6 +433,7 @@ main.CourseShow .FixedSection .Course-Lecturer .Detaile-Lecturer .Det p {
 @media only screen and (max-width: 1000px) {
   main.CourseShow .FixedSection .Course-Lecturer .Detaile-Lecturer .Det p {
     font-size: 10px;
+    line-height: 20px;
   }
 }
 main.CourseShow .CoursesTextS {
@@ -467,6 +472,7 @@ main.CourseShow .CoursesTextS .Box .Title p {
 @media only screen and (max-width: 1000px) {
   main.CourseShow .CoursesTextS .Box .Title p {
     font-size: 14px;
+    line-height: 30px;
   }
 }
 main.CourseShow .CoursesTextS .Box .Text {
@@ -485,6 +491,7 @@ main.CourseShow .CoursesTextS .Box .Text p {
 @media only screen and (max-width: 1000px) {
   main.CourseShow .CoursesTextS .Box .Text p {
     font-size: 10px;
+    line-height: 20px;
   }
 }
 main.CourseShow .CoursesTextS .Box .VideoContainer {
@@ -560,6 +567,7 @@ main.CourseShow .CoursesTextS .Box .Courses-Videos-C .free {
 @media only screen and (max-width: 1000px) {
   main.CourseShow .CoursesTextS .Box .Courses-Videos-C .free {
     font-size: 14px;
+    line-height: 30px;
   }
 }
 main.CourseShow .CoursesTextS .Box .Courses-Videos-C > .Title {
@@ -649,6 +657,7 @@ main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .n
 @media only screen and (max-width: 1000px) {
   main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .nav .Detail > .Titlee p {
     font-size: 14px;
+    line-height: 30px;
   }
 }
 main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .nav .Detail > .Det {
@@ -667,6 +676,7 @@ main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .n
 @media only screen and (max-width: 1000px) {
   main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .nav .Detail > .Det p {
     font-size: 10px;
+    line-height: 20px;
   }
 }
 main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .DropMenu {
@@ -746,6 +756,7 @@ main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .SendContai
 @media only screen and (max-width: 1000px) {
   main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .SendContainer p {
     font-size: 14px;
+    line-height: 30px;
   }
 }
 main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .SendContainer textarea {
@@ -862,6 +873,7 @@ main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-co
 @media only screen and (max-width: 1000px) {
   main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .det p {
     font-size: 10px;
+    line-height: 20px;
   }
 }
 main.CourseShow .CoursesTextS .Box .Comments-C {
@@ -966,6 +978,7 @@ main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Top .Infos .Us
 @media only screen and (max-width: 1000px) {
   main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Top .Infos .UserName p {
     font-size: 14px;
+    line-height: 30px;
   }
 }
 main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Top .Date {
@@ -983,6 +996,7 @@ main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Top .Date span
 @media only screen and (max-width: 1000px) {
   main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Top .Date span {
     font-size: 10px;
+    line-height: 20px;
   }
 }
 main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Bottom {
@@ -1029,6 +1043,7 @@ main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Bottom .row .Q
 @media only screen and (max-width: 1000px) {
   main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Bottom .row .Question p {
     font-size: 14px;
+    line-height: 30px;
   }
 }
 main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Bottom .row .Answer {
@@ -1047,6 +1062,7 @@ main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Bottom .row .A
 @media only screen and (max-width: 1000px) {
   main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Bottom .row .Answer p {
     font-size: 10px;
+    line-height: 20px;
   }
 }
 main.CourseShow .CoursesTextS .Box .Comments-C .rating {
@@ -1080,4 +1096,779 @@ main.CourseShow .CoursesTextS .Box .Comments-C .rating > input:checked ~ label ~
 main.CourseShow .CoursesTextS .Box .Comments-C .rating > input:not(:checked) ~ label:hover,
 main.CourseShow .CoursesTextS .Box .Comments-C .rating > input:not(:checked) ~ label:hover ~ label {
   background-image: url("/images/Vector (16).svg");
+}
+
+main.ProfileUser {
+  width: 100%;
+}
+main.ProfileUser .Containers {
+  margin: 0 auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  margin-top: 13em;
+  gap: 1.2em;
+  padding-bottom: 5em;
+}
+@media only screen and (max-width: 800px) {
+  main.ProfileUser .Containers {
+    display: flex;
+    flex-direction: column;
+  }
+}
+main.ProfileUser .Containers .Right {
+  width: 100%;
+  display: flex;
+  position: sticky;
+  height: -moz-fit-content;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid #000000;
+  top: 10em;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+@media only screen and (max-width: 800px) {
+  main.ProfileUser .Containers .Right {
+    background-color: #fff;
+    z-index: 100;
+    flex-direction: row;
+    top: 6em;
+  }
+}
+main.ProfileUser .Containers .UserInfoBox {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 800px) {
+  main.ProfileUser .Containers .UserInfoBox {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main.ProfileUser .Containers .UserInfoBox {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+main.ProfileUser .Containers .UserInfoBox .Title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8em;
+}
+@media only screen and (max-width: 800px) {
+  main.ProfileUser .Containers .UserInfoBox .Title {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main.ProfileUser .Containers .UserInfoBox .Title {
+    width: auto;
+  }
+}
+main.ProfileUser .Containers .UserInfoBox .Title h1 {
+  width: 80%;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 62.18px;
+  color: #000000;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .UserInfoBox .Title h1 {
+    font-size: 20px;
+  }
+}
+main.ProfileUser .Containers .UserInfoBox .Title .Circle {
+  width: 57px;
+  border-radius: 50%;
+  min-height: 57px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main.ProfileUser .Containers .UserInfoBox .Title .Circle > img {
+  min-height: 60px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+main.ProfileUser .Containers .navBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+  margin-top: 1.5em;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .navBox {
+    gap: 1em;
+    justify-content: flex-end;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main.ProfileUser .Containers .navBox {
+    justify-content: center;
+    align-items: center;
+  }
+}
+main.ProfileUser .Containers .navBox .Item {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+@media only screen and (max-width: 800px) {
+  main.ProfileUser .Containers .navBox .Item {
+    width: auto;
+  }
+}
+main.ProfileUser .Containers .navBox .Item .AnchorLink {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #000000;
+  position: relative;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .navBox .Item .AnchorLink {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+main.ProfileUser .Containers .navBox .Item.active .AnchorLink {
+  color: #FF7B00;
+}
+main.ProfileUser .Containers .navBox .Item.active .AnchorLink::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 1px;
+  background-color: #FF7B00;
+}
+main.ProfileUser .Containers .Left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main.ProfileUser .Containers .Left .Boxes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main.ProfileUser .Containers .Left .Sec {
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+main.ProfileUser .Containers .Left .Sec > .title {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+main.ProfileUser .Containers .Left .Sec > .title p {
+  text-align: right;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 41.45px;
+  color: #000000;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Sec > .title p {
+    font-size: 14px;
+  }
+}
+main.ProfileUser .Containers .Left .Sec > .text {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+main.ProfileUser .Containers .Left .Sec > .text p {
+  text-align: right;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #000000;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Sec > .text p {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+main.ProfileUser .Containers .Left .Section-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000000;
+  padding: 3em 0;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Section-1 {
+    padding: 0.8em 0;
+  }
+}
+main.ProfileUser .Containers .Left .Section-1 .skills-bar {
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 10px;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.8em;
+}
+main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .info {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .info > span {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 62.18px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .info > span {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .info .Box {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.2em;
+}
+main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .info .Box span {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34.55px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .info .Box span {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .progress-line {
+  height: 10px;
+  width: 100%;
+  background: #D9D9D9;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: right;
+  background: #FF7B00;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+main.ProfileUser .Containers .Left .Section-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000000;
+  padding: 3em 0;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Section-2 {
+    padding: 0.8em 0;
+  }
+}
+main.ProfileUser .Containers .Left .Section-2 .Inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.8em;
+}
+main.ProfileUser .Containers .Left .Section-2 .Inner .Btn {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 14px 90px;
+  background-color: #FF7B00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: auto;
+  line-height: 34.55px;
+  margin-left: 3%;
+  margin-top: 30px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Section-2 .Inner .Btn {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main.ProfileUser .Containers .Left .Section-2 .Inner .Btn {
+    margin: 0 auto;
+  }
+}
+main.ProfileUser .Containers .Left .Section-2 .Inner .Btn:hover {
+  background-color: transparent;
+  color: #000000;
+  border: 1px solid #FF7B00;
+}
+main.ProfileUser .Containers .Left .Section-2 .SelectBoxes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap {
+  width: 100%;
+  min-height: 44px;
+  margin: 15px auto;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap.active .default_option:before {
+  top: 25px;
+  transform: rotate(-225deg);
+}
+main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .option {
+  display: flex;
+  align-items: center;
+}
+main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .option p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #000000;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .option p {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .option .icon {
+  background: url("https://i.imgur.com/oEZu0sK.png") no-repeat 0 0;
+  width: 32px;
+  height: 32px;
+  margin-right: 15px;
+}
+main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap.active .select_ul {
+  display: block;
+}
+main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .select_ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 0.5em;
+  background: #fff;
+  border-radius: 5px;
+  display: none;
+  z-index: 2;
+  border: 1px solid #000000;
+}
+main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .select_ul li {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #000000;
+  padding: 10px 1em;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .select_ul li {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .select_ul li:first-child:hover {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .select_ul li:last-child:hover {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .select_ul li:hover {
+  background: #FF7B00;
+  color: #fff !important;
+}
+main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .select_ul li:hover p {
+  color: #fff !important;
+}
+main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .default_option {
+  min-height: 44px;
+  border-radius: 5px;
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+  width: 95%;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .default_option::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 30px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-color: transparent transparent #555555 #555555;
+  transform: rotate(-45deg);
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .default_option::before {
+    top: 14px;
+    width: 10px;
+    height: 10px;
+  }
+}
+main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .default_option > li {
+  min-height: 44px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  padding: 10px 0;
+  padding-right: 0.5em;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .default_option > li {
+    padding: 0;
+    padding-right: 0.5em;
+  }
+}
+main.ProfileUser .Containers .Left .Section-3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000000;
+  padding: 3em 0;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Section-3 {
+    padding: 0.8em 0;
+  }
+}
+main.ProfileUser .Containers .Left .Section-3 .Inner-pr {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5em;
+  gap: 0.8em;
+}
+main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Prr {
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px 0;
+  padding-right: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+@media only screen and (max-width: 600px) {
+  main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Prr {
+    padding-right: 0;
+  }
+}
+main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Prr a {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Des {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Des {
+    margin-right: 10px;
+  }
+}
+main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Des p {
+  text-align: right;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #000000;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Des p {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Det {
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.8em;
+  margin-left: 3%;
+}
+main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Det .Date {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Det .Date p {
+  text-align: right;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: rgba(0, 0, 0, 0.5019607843);
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Det .Date p {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Det .Icon {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main.ProfileUser .Containers .Left .Section-4 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000000;
+  padding: 3em 0;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Section-4 {
+    padding: 0.8em 0;
+  }
+}
+main.ProfileUser .Containers .Left .Section-4 > .title {
+  justify-content: space-between;
+}
+main.ProfileUser .Containers .Left .Section-4 > .title .Date {
+  color: rgba(0, 0, 0, 0.5019607843);
+  text-align: right;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Section-4 > .title .Date {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+main.ProfileUser .Containers .Left .Section-4 .Btn {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 14px 90px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+  color: #000000;
+  text-align: center;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: auto;
+  line-height: 34.55px;
+  margin-left: 3%;
+  margin-top: 30px;
+  border: 1px solid #FF7B00;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Section-4 .Btn {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main.ProfileUser .Containers .Left .Section-4 .Btn {
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
+main.ProfileUser .Containers .Left .Section-4 .Btn:hover {
+  background-color: #FF7B00;
+  color: #fff;
+}
+main.ProfileUser .Containers .Left .Section-4 form {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  margin-top: 2em;
+}
+@media only screen and (max-width: 600px) {
+  main.ProfileUser .Containers .Left .Section-4 form {
+    flex-direction: column;
+  }
+}
+main.ProfileUser .Containers .Left .Section-4 form .Col {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+@media only screen and (max-width: 600px) {
+  main.ProfileUser .Containers .Left .Section-4 form .Col {
+    width: 100%;
+  }
+}
+main.ProfileUser .Containers .Left .Section-4 form .Col .InputBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main.ProfileUser .Containers .Left .Section-4 form .Col input {
+  width: 100%;
+  padding: 10px 0;
+  color: #000000;
+  text-align: right;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  outline: none;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  padding-right: 0.8em;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Section-4 form .Col input {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+main.ProfileUser .Containers .Left .Section-4 form .Col input::-moz-placeholder {
+  font-size: 20px;
+  opacity: 1;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #000000;
+}
+main.ProfileUser .Containers .Left .Section-4 form .Col input:-moz-placeholder-shown {
+  font-size: 20px;
+  opacity: 1;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #000000;
+}
+main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main.ProfileUser .Containers .Left .Section-4 form .Col input:placeholder-shown {
+  font-size: 20px;
+  opacity: 1;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #000000;
+}
+@media only screen and (max-width: 1000px) {
+  main.ProfileUser .Containers .Left .Section-4 form .Col input::-moz-placeholder {
+    font-size: 10px;
+    line-height: 20px;
+  }
+  main.ProfileUser .Containers .Left .Section-4 form .Col input:-moz-placeholder-shown {
+    font-size: 10px;
+    line-height: 20px;
+  }
+  main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main.ProfileUser .Containers .Left .Section-4 form .Col input:placeholder-shown {
+    font-size: 10px;
+    line-height: 20px;
+  }
 }/*# sourceMappingURL=f-style.css.map */
