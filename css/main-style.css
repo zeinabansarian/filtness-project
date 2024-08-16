@@ -93,8 +93,8 @@ textarea:active:focus {
 }
 
 @font-face {
-  src: url("../fonts/Qs_Iranyekan extrablack.eot") format("eot"); /* IE9 Compat Modes */
-  src: url("../fonts/Qs_Iranyekan extrablack.eot?#iefix") format("embedded-opentype"), url("../fonts/Qs_Iranyekan extrablack.woff2") format("woff2"), url("../fonts/Qs_Iranyekan extrablack.woff") format("woff"), url("../fonts/Qs_Iranyekan extrablack.ttf") format("truetype");
+  src: url("../fonts/Qs_Iranyekan black.eot") format("eot"); /* IE9 Compat Modes */
+  src: url("../fonts/Qs_Iranyekan black.eot?#iefix") format("embedded-opentype"), url("../fonts/Qs_Iranyekan black.woff2") format("woff2"), url("../fonts/Qs_Iranyekan black.woff") format("woff"), url("../fonts/Qs_Iranyekan black.ttf") format("truetype");
   font-family: "IRANYekan";
   font-style: normal;
   font-weight: 900;
@@ -106,6 +106,22 @@ textarea:active:focus {
   font-family: "IRANYekan";
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  src: url("../fonts/Qs_Iranyekan.eot") format("eot"); /* IE9 Compat Modes */
+  src: url("../fonts/Qs_Iranyekan.eot?#iefix") format("embedded-opentype"), url("../fonts/Qs_Iranyekan.woff2") format("woff2"), url("../fonts/Qs_Iranyekan.woff") format("woff"), url("../fonts/Qs_Iranyekan.ttf") format("truetype");
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  src: url("../fonts/Qs_Iranyekan light.eot") format("eot"); /* IE9 Compat Modes */
+  src: url("../fonts/Qs_Iranyekan light.eot?#iefix") format("embedded-opentype"), url("../fonts/Qs_Iranyekan light.woff2") format("woff2"), url("../fonts/Qs_Iranyekan light.woff") format("woff"), url("../fonts/Qs_Iranyekan light.ttf") format("truetype");
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 300;
   font-display: swap;
 }
 ::-webkit-scrollbar-track {
@@ -139,7 +155,7 @@ header.Header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 65px 0px;
+  padding-top: 65px;
   position: fixed;
   left: 0;
   z-index: 999;
