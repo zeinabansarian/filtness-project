@@ -3848,7 +3848,7 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
 }
 .home .section2 .midSec .in2 {
   display: flex;
-  width: 83%;
+  width: 92%;
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -4086,7 +4086,7 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
 .home .section4 .detailSec {
   display: flex;
   justify-content: space-between;
-  width: 85%;
+  width: 92%;
   margin: 0 auto;
   padding: 39px 0;
   position: relative;
