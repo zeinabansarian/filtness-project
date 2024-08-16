@@ -1270,37 +1270,69 @@ main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-co
   justify-content: flex-start;
   align-items: center;
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a {
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course {
+  width: 100%;
+  display: flex;
+}
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  transition: all 0.7s ease;
+  gap: 0.8em;
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .IMG {
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .IMG {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .IMG > img {
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .IMG > img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc {
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .IMG .OV {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.7s ease;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+}
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .IMG .OV img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .IMG:hover .OV {
+  opacity: 1;
+}
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .Desc {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .Tit {
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .Desc .Tit {
   width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .Tit p {
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .Desc .Tit p {
   font-size: 36px;
   font-weight: 900;
   line-height: 62.18px;
@@ -1308,18 +1340,18 @@ main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-co
   text-align: right;
 }
 @media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .Tit p {
+  main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .Desc .Tit p {
     font-size: 20px;
   }
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .det {
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .Desc .det {
   width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
   flex-direction: column;
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .det p {
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .Desc .det p {
   font-size: 20px;
   font-weight: 400;
   line-height: 34.55px;
@@ -1327,7 +1359,7 @@ main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-co
   text-align: justify;
 }
 @media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .det p {
+  main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .Desc .det p {
     font-size: 10px;
     line-height: 20px;
   }
@@ -2637,14 +2669,79 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
 .CourseList {
   overflow: hidden;
 }
+.CourseList .searchContainer {
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+.CourseList button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.CourseList .searchContainer input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: #989595;
+  border: none;
+  padding-right: 35px;
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+}
+.CourseList .searchContainer input::-moz-placeholder {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #fff;
+}
+.CourseList .searchContainer input::placeholder {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #fff;
+}
+@media only screen and (max-width: 1000px) {
+  .CourseList .searchContainer input::-moz-placeholder {
+    font-size: 10px;
+  }
+  .CourseList .searchContainer input::placeholder {
+    font-size: 10px;
+  }
+}
+.CourseList .searchContainer .inputBox {
+  width: 342px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.CourseList .searchContainer .inputBox span {
+  width: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
 .CourseList .BannerC {
   overflow: hidden;
   width: 100%;
-  max-height: 260px;
+  height: 260px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  background-color: #606060;
 }
 .CourseList .BannerC::before {
   content: "";
@@ -2656,49 +2753,41 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   z-index: 1;
   background-color: rgba(36, 35, 35, 0.39);
 }
-.CourseList .BannerC > img {
-  width: 100%;
-  max-height: 260px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media only screen and (max-width: 800px) {
-  .CourseList .BannerC > img {
-    max-height: unset;
-    height: 100%;
-  }
-}
 .CourseList .BannerC .overlay {
   position: absolute;
   left: 0;
   bottom: 0;
   margin-top: auto;
-  width: 92%;
+  width: 93%;
   height: 35%;
   z-index: 2;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 0em;
+  right: 0;
+  margin: auto;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 650px) {
   .CourseList .BannerC .overlay {
+    flex-direction: column;
     height: 100%;
     width: 100%;
+    align-items: center;
     justify-content: flex-end;
+    margin-bottom: 2em;
   }
 }
 .CourseList .BannerC .overlay .Title {
-  width: 100%;
+  width: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 650px) {
   .CourseList .BannerC .overlay .Title {
-    margin-right: auto;
-    width: 90%;
+    width: 100%;
+    justify-content: center;
   }
 }
 .CourseList .BannerC .overlay .Title h1 {
@@ -2710,5 +2799,347 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
 @media only screen and (max-width: 1000px) {
   .CourseList .BannerC .overlay .Title h1 {
     font-size: 20px;
+  }
+}
+.CourseList .Containers {
+  width: 93%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.CourseList .Containers .Top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  gap: 2em;
+}
+.CourseList .Containers .Top .Filters {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 0.5em;
+}
+@media only screen and (max-width: 650px) {
+  .CourseList .Containers .Top .Filters {
+    justify-content: center;
+    align-items: center;
+  }
+}
+.CourseList .Containers .Top .Filters .Circle {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.CourseList .Containers .Top .Filters .Circle span {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.CourseList .Containers .Top .Titles {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.CourseList .Containers .Top .Titles h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 41.45px;
+  color: #fff;
+}
+.CourseList .Containers .Top .SelectBoxes {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2vh;
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap {
+  width: -moz-max-content;
+  width: max-content;
+  margin: 15px unset;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap .option {
+  display: flex;
+  align-items: center;
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap .option p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #fff;
+}
+@media only screen and (max-width: 1000px) {
+  .CourseList .Containers .Top .SelectBoxes .select_wrap .option p {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap .option .icon {
+  background: url("images/akar-icons_sort.svg") no-repeat 0 0;
+  width: 32px;
+  height: 32px;
+  margin-right: 15px;
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap.active .select_ul {
+  display: block;
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap .select_ul {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 0.5em;
+  background: #989595;
+  border-radius: 5px;
+  display: none;
+  z-index: 2;
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap .select_ul li {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #fff;
+  padding: 10px 1em;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1000px) {
+  .CourseList .Containers .Top .SelectBoxes .select_wrap .select_ul li {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap .select_ul li:first-child:hover {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap .select_ul li:last-child:hover {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap .select_ul li:hover {
+  background: #FF7B00;
+  color: #fff !important;
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap .select_ul li:hover p {
+  color: #fff !important;
+}
+.CourseList .Containers .Top .SelectBoxes .default_option {
+  border-radius: 5px;
+  min-width: 280px;
+  background: #989595;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+  display: flex;
+  gap: 0.5em;
+}
+@media only screen and (max-width: 1000px) {
+  .CourseList .Containers .Top .SelectBoxes .default_option {
+    padding: 10px 0;
+  }
+}
+.CourseList .Containers .Top .SelectBoxes .default_option::before {
+  content: url("/images/akar-icons_sort.svg");
+  position: relative;
+  top: 20px;
+  right: 11px;
+}
+@media only screen and (max-width: 1000px) {
+  .CourseList .Containers .Top .SelectBoxes .default_option::before {
+    top: 2px;
+  }
+}
+.CourseList .Containers .Top .SelectBoxes .default_option > li {
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  padding: 10px 0;
+  padding-right: 0.5em;
+  margin-left: 1.5em;
+}
+@media only screen and (max-width: 1000px) {
+  .CourseList .Containers .Top .SelectBoxes .default_option > li {
+    padding: 0;
+    padding-right: 0.5em;
+  }
+}
+.CourseList .Containers .CourseLists {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5em;
+  margin-top: 1em;
+  position: relative;
+  margin-bottom: 10em;
+}
+@media only screen and (max-width: 650px) {
+  .CourseList .Containers .CourseLists {
+    grid-template-columns: 1fr;
+  }
+}
+.CourseList .Containers .CourseLists .seeMore {
+  transition: all 0.5s ease;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #FF7B00;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px 40px;
+  border-radius: 48px;
+  -webkit-border-radius: 48px;
+  -moz-border-radius: 48px;
+  -ms-border-radius: 48px;
+  -o-border-radius: 48px;
+  justify-self: center;
+  place-content: center;
+  place-items: center;
+  place-self: center;
+  bottom: -4em;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+@media only screen and (max-width: 650px) {
+  .CourseList .Containers .CourseLists .seeMore {
+    font-size: 10px;
+    padding: 5px 30px;
+    bottom: -6em;
+  }
+}
+.CourseList .Containers .CourseLists .seeMore:hover {
+  cursor: pointer;
+  background-color: #FF7B00;
+}
+.CourseList .Containers .CourseLists .Course {
+  width: 100%;
+  display: none;
+}
+.CourseList .Containers .CourseLists .Course > a {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.7s ease;
+  gap: 0.8em;
+}
+.CourseList .Containers .CourseLists .Course > a .IMG {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.CourseList .Containers .CourseLists .Course > a .IMG > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.CourseList .Containers .CourseLists .Course > a .IMG .OV {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.7s ease;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+}
+.CourseList .Containers .CourseLists .Course > a .IMG .OV img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.CourseList .Containers .CourseLists .Course > a .IMG:hover .OV {
+  opacity: 1;
+}
+.CourseList .Containers .CourseLists .Course > a .Desc {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.CourseList .Containers .CourseLists .Course > a .Desc .Tit {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.CourseList .Containers .CourseLists .Course > a .Desc .Tit p {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 62.18px;
+  color: #fff;
+  text-align: right;
+}
+@media only screen and (max-width: 1000px) {
+  .CourseList .Containers .CourseLists .Course > a .Desc .Tit p {
+    font-size: 20px;
+  }
+}
+.CourseList .Containers .CourseLists .Course > a .Desc .det {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.CourseList .Containers .CourseLists .Course > a .Desc .det p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #fff;
+  text-align: justify;
+}
+@media only screen and (max-width: 1000px) {
+  .CourseList .Containers .CourseLists .Course > a .Desc .det p {
+    font-size: 10px;
+    line-height: 20px;
   }
 }/*# sourceMappingURL=main-style.css.map */

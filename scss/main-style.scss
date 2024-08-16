@@ -2,6 +2,9 @@ $black:#000000;
 $white:#fff;
 $Orange:#FF7B00;
 $Gray:#D9D9D9;
+$Gray1:#606060;
+$Gray2:#989595;
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -1246,59 +1249,96 @@ main.CourseShow{
                             display: flex;
                             justify-content: flex-start;
                             align-items: center;
-                            >a{
+                            .Course{
                                 width: 100%;
                                 display: flex;
-                                justify-content: flex-start;
-                                align-items: center;
-                                flex-direction: column;
-                                .IMG{
+                
+                                >a{
                                     width: 100%;
                                     display: flex;
-                                    justify-content: center;
+                                    justify-content: flex-start;
                                     align-items: center;
-                                    >img{
+                                    flex-direction: column;
+                                    transition: all .7s ease;
+                                    gap: .8em;
+                                    .IMG{
                                         width: 100%;
-                                        object-fit: cover;
-                                    }
-                                }
-                                .Desc{
-                                    width: 100%;
-                                    display: flex;
-                                    justify-content: space-between;
-                                    align-items: flex-start;
-                                    .Tit{
-                                        width: 50%;
                                         display: flex;
-                                        justify-content: flex-start;
+                                        justify-content: center;
                                         align-items: center;
-                                        p{
-                                            font-size: 36px;
-                                            font-weight: 900;
-                                            line-height: 62.18px;
-                                            color: $white;
-                                            text-align: right;
-                                            @media only screen and (max-width: 1000px) {
-                                                font-size: 20px;
-                                               }
+                                        position: relative;
+                                        >img{
+                                            width: 100%;
+                                            object-fit: cover;
+                                        }
+                                        .OV{
+                                          position: absolute;
+                                          left: 0;
+                                          top: 0;
+                                          opacity: 0;
+                                          transition: all .7s ease;
+                                          width: 100%;
+                                          height: 100%;
+                                          display: flex;
+                                          justify-content: center;
+                                          align-items: center;
+                                          overflow: hidden;
+                                          -webkit-transition: all .7s ease;
+                                          -moz-transition: all .7s ease;
+                                          -ms-transition: all .7s ease;
+                                          -o-transition: all .7s ease;
+                                          img
+                                   
+                {
+                                                width: 100%;
+                                                object-fit: cover;
+                                            }
+                                        }
+                                        &:hover{
+                                            .OV{
+                                                opacity: 1;
+                                            }
                                         }
                                     }
-                                    .det{
-                                        width: 50%;
+                                
+                                    .Desc{
+                                        width: 100%;
                                         display: flex;
-                                        justify-content: flex-start;
-                                        align-items: flex-end;
-                                        flex-direction: column;
-                                        p{
-                                            font-size: 20px;
-                                            font-weight: 400;
-                                            line-height: 34.55px;
-                                            color: $white;
-                                            text-align: justify;
-                                            @media only screen and (max-width: 1000px) {
-                                                font-size: 10px;
-                                                line-height:20px;
-                                               }
+                                        justify-content: space-between;
+                                        align-items: flex-start;
+                                        .Tit{
+                                            width: 50%;
+                                            display: flex;
+                                            justify-content: flex-start;
+                                            align-items: center;
+                                            p{
+                                                font-size: 36px;
+                                                font-weight: 900;
+                                                line-height: 62.18px;
+                                                color: $white;
+                                                text-align: right;
+                                                @media only screen and (max-width: 1000px) {
+                                                    font-size: 20px;
+                                                   }
+                                            }
+                                        }
+                                        .det{
+                                            width: 50%;
+                                            display: flex;
+                                            justify-content: flex-start;
+                                            align-items: flex-end;
+                                            flex-direction: column;
+                                            p{
+                                                font-size: 20px;
+                                                font-weight: 400;
+                                                line-height: 34.55px;
+                                                color: $white;
+                                                text-align: justify;
+                                                @media only screen and (max-width: 1000px) {
+                                                    font-size: 10px;
+                                                    line-height:20px;
+                                                   }
+                                            }
                                         }
                                     }
                                 }
@@ -2528,18 +2568,73 @@ main.ProfileUser{
 
 .CourseList{
     overflow: hidden;
+    .searchContainer{
+      width: auto;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+      }
+      button{
+        background-color: transparent;
+        outline: none;
+        border: none;
+      }
+      
+      .searchContainer input{
+          width: 100%;
+        
+          height: 45px;
+          border: none;
+          outline: none;
+          padding: 10px;
+          background-color:$Gray2;
+          border: none;
+          padding-right: 35px;
+          border-radius:35px ;
+          -webkit-border-radius:35px ;
+          -moz-border-radius:35px ;
+          -ms-border-radius:35px ;
+          -o-border-radius:35px ;
+}
+          .searchContainer input::placeholder{
+              font-size: 20px;
+          font-weight: 400;
+          
+          line-height: 34.55px;
+          color:$white;
+          @media only screen and (max-width: 1000px) {
+            font-size: 10px;
+           }
+          }
+          .searchContainer .inputBox{
+              width: 342px;
+              display: flex;
+              position: relative;
+              justify-content: center;
+              align-items: center;
+          }
+          .searchContainer .inputBox span{
+              width: 20px;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          position: absolute;
+          right: 10px;
+          top: 0;
+          }
+      
     .BannerC{
         overflow: hidden;
         width: 100%;
-        max-height: 260px;
+        height: 260px;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        // @media only screen and (max-width: 800px) {
-        //    max-height: unset;
-        //    height: 100vh;
-        //  }
+        background-color: $Gray1;
+
         &::before{
             content: '';
             position: absolute;
@@ -2550,42 +2645,39 @@ main.ProfileUser{
             z-index: 1;
             background-color: rgba(36, 35, 35, 0.39);
         }
-        >img{
-            width: 100%;
-            max-height: 260px;
-            object-fit: cover;
-            @media only screen and (max-width: 800px) {
-              max-height: unset;
-              height: 100%;
-             }
-        }
+
         .overlay{
             position: absolute;
             left: 0;
             bottom: 0;
             margin-top: auto;
-            width: 92%;
+            width: 93%;
             height: 35%;
             z-index: 2;
             display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+            justify-content: space-between;
             align-items: flex-start;
             gap: 0em;
-            @media only screen and (max-width: 800px) {
-                height: 100%;
-                width: 100%;
-                justify-content: flex-end;
+            right: 0;
+            margin: auto;
+            @media only screen and (max-width: 650px) {
+              flex-direction: column;
+              height: 100%;
+              width: 100%;
+              align-items: center;
+              justify-content: flex-end;
+              margin-bottom: 2em;
+               }
 
-             }
             .Title{
-                width: 100%;
+                width: auto;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
-                @media only screen and (max-width: 800px) {
-                  margin-right: auto;
-                  width: 90%;
+                @media only screen and (max-width: 650px) {
+                 
+                  width: 100%;
+                  justify-content: center;
 
                  }
                 h1{
@@ -2597,6 +2689,351 @@ main.ProfileUser{
                     font-size: 20px;
 
                    }
+                }
+            }
+        }
+    }
+    .Containers{
+        width: 93%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        .Top{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 2em;
+            gap: 2em;
+            .Filters{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                gap: .5em;
+                @media only screen and (max-width: 650px) {
+                 justify-content: center;
+                 align-items: center;
+                   }
+                .Circle{
+                    width: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    span{
+                        width: 46px;
+                        height: 46px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        background-color: $white;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+}
+                }
+            }
+          .Titles{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            h2{
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 41.45px;
+                color: $white;
+            }
+          }
+            .SelectBoxes{
+                width:auto;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 2vh;
+                .select_wrap{
+                    width: max-content;
+                    margin: 15px unset;
+                    position: relative;
+                    user-select: none;
+
+
+                   
+                 
+                    .option{
+                        display: flex;
+                        align-items: center;
+                        p{
+                            font-size: 20px;
+                            font-weight: 400;
+                            line-height: 34.55px;
+                            color:$white;
+                            @media only screen and (max-width: 1000px) {
+                                font-size: 10px;
+                                line-height:20px;
+                               }
+                         
+                        }
+                        .icon{
+                            background: url('images/akar-icons_sort.svg') no-repeat 0 0;
+                              width: 32px;
+                              height: 32px;
+                            margin-right: 15px;
+                          }
+                      }
+                      &.active .select_ul {
+                        display: block;
+                    }
+                    .select_ul{
+                        position: absolute;
+                        top: 100%;
+                        right: 0;
+                        width: max-content;
+                        margin: 0 auto;
+                        margin-top: .5em;
+                        background:$Gray2;
+                        border-radius: 5px;
+                        display: none;
+                        z-index: 2;
+                     
+                      
+                        li{
+                            font-size: 20px;
+                            font-weight: 400;
+                            line-height: 34.55px;
+                            color:$white;
+                            padding: 10px 1em;
+                            
+                            cursor: pointer;
+                            @media only screen and (max-width: 1000px) {
+                                font-size: 10px;
+                                line-height:20px;
+                               }
+
+                            &:first-child:hover{
+                                border-top-left-radius: 5px;
+                                border-top-right-radius: 5px;
+                              }
+                              &:last-child:hover{
+                                border-bottom-left-radius: 5px;
+                                border-bottom-right-radius: 5px;
+                              }
+                              &:hover{
+                                background:$Orange;
+                         
+                                   color:$white !important;
+                                   p{
+                               
+                         
+                                    color:$white !important;
+                                 
+                               }
+                              }
+                              
+                          }
+                      }
+                  }
+                  .default_option{
+                    border-radius: 5px;
+                    min-width: 280px;
+                    background:$Gray2;
+                    position: relative;
+                    cursor: pointer;
+                    width: 100%;
+                    margin: 0 auto;
+                    border-radius: 35px;
+                    -webkit-border-radius: 35px;
+                    -moz-border-radius: 35px;
+                    -ms-border-radius: 35px;
+                    -o-border-radius: 35px;
+                    display: flex;
+                    gap: .5em;
+                    @media only screen and (max-width: 1000px) {
+                        padding: 10px 0;
+                       }
+                    &::before                
+{
+                        content: url('/images/akar-icons_sort.svg');
+                        position: relative;
+                        top: 20px;
+                        right: 11px;
+
+                        @media only screen and (max-width: 1000px) {
+                           top: 2px;
+                           }
+                    }
+                    >li{
+                        border-radius: 35px;
+                        -webkit-border-radius: 35px;
+                        -moz-border-radius: 35px;
+                        -ms-border-radius: 35px;
+                        -o-border-radius: 35px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-content: center;
+                        align-items: center;
+                        padding: 10px 0;
+                        padding-right: 0.5em;
+                        margin-left: 1.5em;
+                        @media only screen and (max-width: 1000px) 
+{
+                          padding: 0 ;
+                          padding-right: .5em;
+                           }
+                 
+                    }
+                  }
+                 
+            }
+        }
+        .CourseLists{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 2.5em;
+            margin-top: 1em;
+            position: relative;
+            margin-bottom: 10em;
+            @media only screen and (max-width: 650px) {
+               grid-template-columns: 1fr;
+               }
+            .seeMore{
+                transition: all .5s ease;
+                width: -moz-fit-content;
+                width: fit-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid $Orange;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 34.55px;
+                color:$white;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                padding: 10px 40px;
+                border-radius: 48px;
+                -webkit-border-radius: 48px;
+                -moz-border-radius: 48px;
+                -ms-border-radius: 48px;
+                -o-border-radius: 48px;
+                justify-self: center;
+                place-content: center;
+                place-items: center;
+                place-self: center;
+                bottom: -4em;
+                -webkit-transition: all .5s ease;
+                -moz-transition: all .5s ease;
+                -ms-transition: all .5s ease;
+                -o-transition: all .5s ease;
+                @media only screen and (max-width: 650px) {
+                   font-size: 10px;
+                   padding: 5px 30px;
+                   bottom: -6em;
+                    }
+                &:hover
+              
+{
+                    cursor: pointer;
+                    background-color: $Orange;
+                   
+                }
+}
+            .Course{
+                width: 100%;
+                display: none;
+
+                >a{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    flex-direction: column;
+                    transition: all .7s ease;
+                    gap: .8em;
+                    .IMG{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        >img{
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                        .OV{
+                          position: absolute;
+                          left: 0;
+                          top: 0;
+                          opacity: 0;
+                          transition: all .7s ease;
+                          width: 100%;
+                          height: 100%;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                          overflow: hidden;
+                          -webkit-transition: all .7s ease;
+                          -moz-transition: all .7s ease;
+                          -ms-transition: all .7s ease;
+                          -o-transition: all .7s ease;
+                          img
+                   
+{
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        &:hover{
+                            .OV{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                
+                    .Desc{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        .Tit{
+                            width: 50%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            p{
+                                font-size: 36px;
+                                font-weight: 900;
+                                line-height: 62.18px;
+                                color: $white;
+                                text-align: right;
+                                @media only screen and (max-width: 1000px) {
+                                    font-size: 20px;
+                                   }
+                            }
+                        }
+                        .det{
+                            width: 50%;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+                            flex-direction: column;
+                            p{
+                                font-size: 20px;
+                                font-weight: 400;
+                                line-height: 34.55px;
+                                color: $white;
+                                text-align: justify;
+                                @media only screen and (max-width: 1000px) {
+                                    font-size: 10px;
+                                    line-height:20px;
+                                   }
+                            }
+                        }
+                    }
                 }
             }
         }
