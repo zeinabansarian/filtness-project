@@ -4178,7 +4178,7 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   line-height: 41.45px;
   text-align: right;
   color: white;
-  margin-right: 13%;
+  margin-right: 7%;
   margin-bottom: 50px;
   display: block;
 }
@@ -4193,7 +4193,7 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   position: relative;
 }
 .home .section4 .list .inList ul li {
-  padding: 25px 13% 25px 0;
+  padding: 25px 7% 25px 0;
   cursor: pointer;
   border-bottom: 1px solid white;
   background-image: linear-gradient(#ff7b00, #ff7b00);
@@ -4380,7 +4380,7 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   }
 }
 .home .section5 .inBmi {
-  width: 87%;
+  width: 92%;
   margin: 0 auto;
   display: flex;
   border: 1px solid white;
@@ -4829,7 +4829,7 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   background-color: white;
 }
 .home .section7 .faq {
-  width: 88%;
+  width: 92%;
   margin: 0 auto;
   padding: 50px 0;
 }
