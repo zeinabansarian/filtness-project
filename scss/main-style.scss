@@ -181,6 +181,97 @@ a,ul,li{
 *{
 	font-family: "IRANYekan";
 }
+.courseLinkMenu{
+  position: relative;
+  &>a{
+    display: flex;
+    white-space: nowrap;
+    column-gap: 10px;
+  }
+  .megaMenu{
+    position: absolute;
+    margin-top: 30px;
+    background-color: black;
+    min-width: 200px;
+    padding:10px 30px;
+    top: 25px;
+    right: -100%;
+    border-radius: 10px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.5s ease;
+   
+    .megaItems{
+      margin-bottom: 10px;
+      a{
+        font-weight: 400;
+    line-height: 34.55px;
+    display: block;
+    width: 100%;
+    color: #fff;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+
+      }
+      a:hover{
+        color: black;
+        background-color: white;
+      }
+    }
+  }
+  .arrow{
+    font-weight: 400;
+    line-height: 34.55px;
+    display: block;
+    width: 100%;
+    color: #fff;
+    display: none;
+    width: fit-content;
+  }
+  @media only screen and (max-width: 1000px) {
+    .megaMenu{
+      .megaItems{
+        a{
+          font-size: 15px!important;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    &>a{
+      display: flex;
+      justify-content: center;
+      margin-bottom: -30px;
+    }
+    .arrow{
+      display: block;
+    }
+    .megaMenu{
+      position: relative;
+      height: 0;
+      left: unset;
+      right: unset;
+      margin-top: 0;
+      .megaItems{
+        text-align: center;
+        a{
+          font-size: 15px!important;
+        }
+      }
+    }
+  }
+}
+.courseLinkMenu:hover{
+.megaMenu{
+  transform: scaleY(1);
+}
+@media only screen and (max-width: 800px) {
+  .megaMenu{
+    height: 100%;
+  }
+
+}
+}
 header.Header{
     width: 100vw;
     display: flex;
@@ -191,6 +282,7 @@ header.Header{
     left: 0;
     z-index: 999;
     top: 0;
+   
     >nav.Menu-container{
     margin: 0 auto;
     width: 88%;
@@ -462,6 +554,13 @@ footer.Footer{
 
 main.CourseShow{
     overflow: hidden;
+    .inVideo{
+
+      width: 100%;
+    }
+    .plyr {
+      width: 100%;
+    }
     @media only screen and (max-width: 800px) {
         svg{
             width: 30px;

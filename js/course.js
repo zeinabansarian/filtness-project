@@ -76,3 +76,7 @@ let swiperCourse= new Swiper(".swiper-course", {
         }
     }
   }); 
+
+
+  const player = new Plyr('.inVideo video', {captions: {active: true}});
+window.player = player;

@@ -150,6 +150,4 @@ callcuBmi.addEventListener("click" , function (event) {
 
 
 const player = new Plyr('.section3 video', {captions: {active: true}});
-
-// Expose player so it can be used from the console
 window.player = player;

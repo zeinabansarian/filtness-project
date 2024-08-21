@@ -166,6 +166,92 @@ a, ul, li {
   font-family: "IRANYekan";
 }
 
+.courseLinkMenu {
+  position: relative;
+}
+.courseLinkMenu > a {
+  display: flex;
+  white-space: nowrap;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.courseLinkMenu .megaMenu {
+  position: absolute;
+  margin-top: 30px;
+  background-color: black;
+  min-width: 200px;
+  padding: 10px 30px;
+  top: 25px;
+  right: -100%;
+  border-radius: 10px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.5s ease;
+}
+.courseLinkMenu .megaMenu .megaItems {
+  margin-bottom: 10px;
+}
+.courseLinkMenu .megaMenu .megaItems a {
+  font-weight: 400;
+  line-height: 34.55px;
+  display: block;
+  width: 100%;
+  color: #fff;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+.courseLinkMenu .megaMenu .megaItems a:hover {
+  color: black;
+  background-color: white;
+}
+.courseLinkMenu .arrow {
+  font-weight: 400;
+  line-height: 34.55px;
+  display: block;
+  width: 100%;
+  color: #fff;
+  display: none;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media only screen and (max-width: 1000px) {
+  .courseLinkMenu .megaMenu .megaItems a {
+    font-size: 15px !important;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .courseLinkMenu > a {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -30px;
+  }
+  .courseLinkMenu .arrow {
+    display: block;
+  }
+  .courseLinkMenu .megaMenu {
+    position: relative;
+    height: 0;
+    left: unset;
+    right: unset;
+    margin-top: 0;
+  }
+  .courseLinkMenu .megaMenu .megaItems {
+    text-align: center;
+  }
+  .courseLinkMenu .megaMenu .megaItems a {
+    font-size: 15px !important;
+  }
+}
+
+.courseLinkMenu:hover .megaMenu {
+  transform: scaleY(1);
+}
+@media only screen and (max-width: 800px) {
+  .courseLinkMenu:hover .megaMenu {
+    height: 100%;
+  }
+}
+
 header.Header {
   width: 100vw;
   display: flex;
@@ -443,6 +529,12 @@ footer.Footer .Right .Socilas a {
 
 main.CourseShow {
   overflow: hidden;
+}
+main.CourseShow .inVideo {
+  width: 100%;
+}
+main.CourseShow .plyr {
+  width: 100%;
 }
 @media only screen and (max-width: 800px) {
   main.CourseShow svg {
