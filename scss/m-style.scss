@@ -511,7 +511,7 @@ $orange: #ff7b00;
         display: flex;
         column-gap: 74px;
         align-items: center;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         row-gap: 60px;
         li {
           background-color: white;
@@ -1394,7 +1394,7 @@ $orange: #ff7b00;
         }
       }
       .lSide {
-        width: 100%;
+        width: 50%;
         p {
           font-family: IRANYekan;
           font-size: 36px;

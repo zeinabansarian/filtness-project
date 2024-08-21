@@ -103,3 +103,53 @@ circles.forEach((element) => {
     },
   });
 });
+
+
+let callcuBmi = document.querySelector(".callcuBmi")
+
+callcuBmi.addEventListener("click" , function (event) {
+  let inputs = document.querySelectorAll(".bmiForm input")
+  let msg = document.querySelector(".msg")
+  let msgP = document.querySelector(".msg p")
+  let heightt = document.querySelector(".heightt")
+  let weightt = document.querySelector(".weightt");
+  let bmiInner = document.querySelector(".bmiInner")
+  event.preventDefault();
+  let gender = document.querySelector(".gender")
+  console.log(gender.value);
+  inputs.forEach(element => {
+    if (element.value=="") {
+      msg.style.display="block"
+      msgP.innerHTML="لطفا ورودی ها را کامل کنید.";
+      
+      setTimeout(() => {
+        
+        msg.style.display="none"
+      }, 2000);
+    }else if(gender.value==""){
+      
+      msg.style.display="block"
+      msgP.innerHTML="لطفا جنسیت را انتخاب کنید.";
+      
+      setTimeout(() => {
+        
+        msg.style.display="none"
+      }, 2000);
+    }
+    else{
+      let bmi = Math.round((Number(weightt.value)/Math.pow(Number(heightt.value/100),2))*100)/100
+      bmiInner.innerHTML=bmi
+    }
+    
+  });
+
+
+  
+})
+
+
+
+const player = new Plyr('.section3 video', {captions: {active: true}});
+
+// Expose player so it can be used from the console
+window.player = player;

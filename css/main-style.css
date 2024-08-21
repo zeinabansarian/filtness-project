@@ -5022,8 +5022,12 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   -moz-column-gap: 74px;
        column-gap: 74px;
   align-items: center;
-  flex-wrap: wrap;
   row-gap: 60px;
+}
+@media only screen and (max-width: 900px) {
+  .home .section1 .overBtns ul {
+    flex-wrap: wrap;
+  }
 }
 .home .section1 .overBtns ul li {
   background-color: white;
@@ -5306,6 +5310,9 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   .home .section3 {
     padding: 0 28px;
   }
+}
+.home .section3 .plyr {
+  width: 100%;
 }
 .home .section3 .gridSecton {
   grid-column-gap: 0px;
@@ -5778,7 +5785,7 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   row-gap: 40px;
   margin-bottom: 80px;
 }
-.home .section5 .inBmi .rSide form input {
+.home .section5 .inBmi .rSide form input, .home .section5 .inBmi .rSide form select {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid white;
@@ -5788,6 +5795,15 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   font-size: 20px;
   font-weight: 400;
   line-height: 34.55px;
+  text-align: right;
+}
+.home .section5 .inBmi .rSide form select {
+  background-color: black;
+  font-family: IRANYekan;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: rgba(255, 255, 255, 0.452);
   text-align: right;
 }
 .home .section5 .inBmi .rSide form button {
@@ -5808,6 +5824,18 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   color: #d9d9d9;
   border: 1px solid #ff7b00;
   border-radius: 48px;
+}
+.home .section5 .inBmi .rSide .msg {
+  display: none;
+}
+.home .section5 .inBmi .rSide .msg p {
+  font-family: IRANYekan;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 41.45px;
+  text-align: right;
+  color: white;
+  transform: translateY(-30px);
 }
 @media only screen and (max-width: 900px) {
   .home .section5 .inBmi .rSide h2 {
@@ -5895,7 +5923,7 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   }
 }
 .home .section5 .inBmi .lSide {
-  width: 100%;
+  width: 50%;
 }
 .home .section5 .inBmi .lSide p {
   font-family: IRANYekan;

@@ -5,8 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
+  <link rel='stylesheet' href='https://unpkg.com/plyr@3/dist/plyr.css'>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.css" />
   <link rel="stylesheet" href="css/main-style.css" />
+
+  <!-- <link rel="stylesheet" href="css/m-style.css"> -->
 </head>
 
 <body>
@@ -832,18 +836,9 @@
         </div>
         <div class="inVideo">
           <video poster="images/Rectangle 10.png" playsinline>
-            <source src="" />
+            <source src="https://1241959876.rsc.cdn77.org/big_buck_bunny_480x272.mp4" poster="https://peach.blender.org/wp-content/uploads/bbb-splash.png?x11217" />
           </video>
-          <div class="playbtn">
-            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M39.584 64.9333V35.0667C39.5846 34.693 39.6857 34.3264 39.8767 34.0052C40.0678 33.684 40.3417 33.4201 40.6697 33.2412C40.9978 33.0623 41.3679 32.9749 41.7414 32.9881C42.1148 33.0014 42.4778 33.1149 42.7923 33.3167L66.0257 48.2459C66.3198 48.4343 66.5619 48.6938 66.7295 49.0003C66.8972 49.3069 66.9851 49.6506 66.9851 50C66.9851 50.3494 66.8972 50.6932 66.7295 50.9997C66.5619 51.3062 66.3198 51.5657 66.0257 51.7542L42.7923 66.6875C42.4778 66.8893 42.1148 67.0028 41.7414 67.0161C41.3679 67.0294 40.9978 66.9419 40.6697 66.763C40.3417 66.5841 40.0678 66.3202 39.8767 65.999C39.6857 65.6778 39.5846 65.3112 39.584 64.9375V64.9333Z"
-                fill="white" />
-              <path
-                d="M4.16602 49.9998C4.16602 24.6873 24.6868 4.1665 49.9993 4.1665C75.3118 4.1665 95.8327 24.6873 95.8327 49.9998C95.8327 75.3123 75.3118 95.8332 49.9993 95.8332C24.6868 95.8332 4.16602 75.3123 4.16602 49.9998ZM49.9993 10.4165C39.5012 10.4165 29.433 14.5869 22.0097 22.0102C14.5864 29.4335 10.416 39.5017 10.416 49.9998C10.416 60.498 14.5864 70.5662 22.0097 77.9895C29.433 85.4128 39.5012 89.5832 49.9993 89.5832C60.4975 89.5832 70.5657 85.4128 77.989 77.9895C85.4123 70.5662 89.5827 60.498 89.5827 49.9998C89.5827 39.5017 85.4123 29.4335 77.989 22.0102C70.5657 14.5869 60.4975 10.4165 49.9993 10.4165Z"
-                fill="white" />
-            </svg>
-          </div>
+     
         </div>
         <div class="vCircle circle">
           <div class="back"></div>
@@ -1137,16 +1132,30 @@
                   لورم ایپسوم متن ساختگی با تولید لورم ایپسوم متن ساختگی با تولید لورم ایپسوم متن ساختگی با تولید 
                 </p>
               </div>
-              <form action="">
+              <form action="" class="bmiForm">
                 <div class="inputs">
 
-                  <input type="text" placeholder="قد">
-                  <input type="text" placeholder="وزن">
+                  <input class="heightt" type="text" placeholder="قد">
+                  <input class="weightt" type="text" placeholder="وزن">
                   <input type="text" placeholder="سن">
-                  <input type="text" placeholder="جنسیت">
+                  <select name="gender" id="gender" class="gender" >
+                    <option value="" disabled selected>
+                      جنسیت
+                    </option>
+                    <option value="1">
+                      زن
+                    </option>
+                    <option value="2">
+                      مرد
+                    </option>
+                  </select>
                 </div>
-  
-                <button>
+                <div class="msg">
+                  <p>
+                    
+                  </p>
+                </div>
+                <button class="callcuBmi">
                   محاسبه
                 </button>
               </form>
@@ -1161,7 +1170,7 @@
                 شما این است BMI
               </p>
               
-              <div class="bmi">
+              <div class="bmi bmiInner">
                 0.0
               </div>
             </div>
@@ -1415,8 +1424,10 @@
   <script src="js/jQuery.js"></script>
   <script src="js/split-type.js"></script>
 <script src="js/gsap.js"></script>
+<script src='https://unpkg.com/plyr@3'></script>
+
 <script src="js/scrollTrigger.js"></script>
-  <script src="js/playVideo.js"></script>
+  <!-- <script src="js/playVideo.js"></script> -->
   <script src="js/config.js"></script>
 
   <script src="js/home.js"></script>

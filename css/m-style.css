@@ -511,7 +511,6 @@
   -moz-column-gap: 74px;
        column-gap: 74px;
   align-items: center;
-  flex-wrap: wrap;
   row-gap: 60px;
 }
 .home .section1 .overBtns ul li {
@@ -1384,7 +1383,7 @@
   }
 }
 .home .section5 .inBmi .lSide {
-  width: 100%;
+  width: 50%;
 }
 .home .section5 .inBmi .lSide p {
   font-family: IRANYekan;

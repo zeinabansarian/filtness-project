@@ -4817,8 +4817,13 @@ $orange: #ff7b00;
         display: flex;
         column-gap: 74px;
         align-items: center;
-        flex-wrap: wrap;
         row-gap: 60px;
+        @media only screen and (max-width: 900px) {
+          flex-wrap: wrap;
+          li{
+            // width: 50%;
+          }
+        }
         li {
           background-color: white;
           transition: 0.5s;
@@ -5123,6 +5128,9 @@ $orange: #ff7b00;
   .section3 {
     @media only screen and (max-width: 480px) {
       padding: 0 28px;
+    }
+    .plyr {
+      width: 100%;
     }
     .gridSecton {
       grid-column-gap: 0px;
@@ -5577,7 +5585,7 @@ $orange: #ff7b00;
             margin-bottom: 80px;
           }
 
-          input {
+          input , select {
             background-color: transparent;
             border: none;
             border-bottom: 1px solid white;
@@ -5587,6 +5595,15 @@ $orange: #ff7b00;
             font-size: 20px;
             font-weight: 400;
             line-height: 34.55px;
+            text-align: right;
+          }
+          select{
+            background-color: black;
+            font-family: IRANYekan;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 34.55px;
+            color: rgba(255, 255, 255, 0.452);
             text-align: right;
           }
           button {
@@ -5609,6 +5626,18 @@ $orange: #ff7b00;
             border-radius: 48px;
           }
         }
+        .msg{
+          display: none;
+          p {
+            font-family: IRANYekan;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 41.45px;
+            text-align: right;
+            color: white;
+                transform: translateY(-30px);
+          }
+        }
 
         @media only screen and (max-width: 900px) {
           h2 {
@@ -5628,7 +5657,7 @@ $orange: #ff7b00;
               row-gap: 20px;
               margin-bottom: 40px;
             }
-
+       
             input {
               background-color: transparent;
               border: none;
@@ -5700,7 +5729,7 @@ $orange: #ff7b00;
         }
       }
       .lSide {
-        width: 100%;
+        width: 50%;
         p {
           font-family: IRANYekan;
           font-size: 36px;
