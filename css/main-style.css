@@ -133,6 +133,12 @@ body, html {
     scroll-padding-top: 14em;
   }
 }
+@media only screen and (max-width: 800px) {
+  body, html {
+    scroll-margin-top: 8em;
+    scroll-padding-top: 8em;
+  }
+}
 
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -207,7 +213,6 @@ header.Header .Menu-link {
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
-  cursor: pointer;
 }
 header.Header .Menu-link:hover {
   color: #FF7B00;
@@ -236,7 +241,7 @@ header.Header .Logo a {
 @media only screen and (max-width: 800px) {
   header.Header nav.navM {
     margin-left: auto;
-    margin-right: 28px;
+    margin-right: 16px;
     margin-top: 16px;
   }
   header.Header .Mlogo {
@@ -436,25 +441,6 @@ footer.Footer .Right .Socilas a {
   align-items: center;
 }
 
-/* Animations */
-/* Bar's animation */
-@keyframes animate {
-  100% {
-    transform: scaleX(1);
-  }
-}
-/* Skill's name animation */
-@keyframes showText {
-  100% {
-    opacity: 1;
-  }
-}
-/* Percentage number's animation */
-@keyframes showText2 {
-  100% {
-    opacity: 1;
-  }
-}
 main.CourseShow {
   overflow: hidden;
 }
@@ -594,7 +580,7 @@ main.CourseShow .BroadCrumbs ul .nav-Link {
   }
 }
 main.CourseShow .Containers {
-  width: 90%;
+  width: 93%;
   display: flex;
   display: grid;
   grid-template-columns: 65% 35%;
@@ -603,6 +589,7 @@ main.CourseShow .Containers {
 @media only screen and (max-width: 800px) {
   main.CourseShow .Containers {
     display: flex;
+    width: 95%;
     flex-direction: column;
   }
 }
@@ -612,6 +599,11 @@ main.CourseShow .FixedSection {
   flex-direction: column;
   position: sticky;
   gap: 1em;
+}
+@media only screen and (max-width: 800px) {
+  main.CourseShow .FixedSection {
+    margin-top: 3em;
+  }
 }
 main.CourseShow .FixedSection .BasketDetail {
   display: flex;
@@ -902,6 +894,11 @@ main.CourseShow .CoursesTextS .Box {
   display: flex;
   flex-direction: column;
   margin-left: auto;
+}
+@media only screen and (max-width: 800px) {
+  main.CourseShow .CoursesTextS .Box {
+    width: 100%;
+  }
 }
 main.CourseShow .CoursesTextS .Box > .IMG {
   width: 100%;
@@ -1271,37 +1268,69 @@ main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-co
   justify-content: flex-start;
   align-items: center;
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a {
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course {
+  width: 100%;
+  display: flex;
+}
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  transition: all 0.7s ease;
+  gap: 0.8em;
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .IMG {
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .IMG {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .IMG > img {
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .IMG > img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc {
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .IMG .OV {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.7s ease;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+}
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .IMG .OV img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .IMG:hover .OV {
+  opacity: 1;
+}
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .Desc {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .Tit {
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .Desc .Tit {
   width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .Tit p {
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .Desc .Tit p {
   font-size: 36px;
   font-weight: 900;
   line-height: 62.18px;
@@ -1309,18 +1338,18 @@ main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-co
   text-align: right;
 }
 @media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .Tit p {
+  main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .Desc .Tit p {
     font-size: 20px;
   }
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .det {
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .Desc .det {
   width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
   flex-direction: column;
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .det p {
+main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .Desc .det p {
   font-size: 20px;
   font-weight: 400;
   line-height: 34.55px;
@@ -1328,7 +1357,7 @@ main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-co
   text-align: justify;
 }
 @media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .det p {
+  main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide .Course > a .Desc .det p {
     font-size: 10px;
     line-height: 20px;
   }
@@ -1407,6 +1436,7 @@ main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content {
 @media only screen and (max-width: 800px) {
   main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content {
     padding: 0;
+    padding-bottom: 1em;
   }
 }
 main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Top {
@@ -1556,7 +1586,26 @@ main.CourseShow .CoursesTextS .Box .Comments-C .rating > input:not(:checked) ~ l
 }
 
 main.ProfileUser {
+  /* Animations */
+  /* Bar's animation */
+  /* Skill's name animation */
+  /* Percentage number's animation */
   width: 100%;
+}
+@keyframes animatebar {
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
 }
 main.ProfileUser .Containers {
   margin: 0 auto;
@@ -1571,6 +1620,7 @@ main.ProfileUser .Containers {
   main.ProfileUser .Containers {
     display: flex;
     flex-direction: column;
+    width: 95%;
   }
 }
 main.ProfileUser .Containers .Right {
@@ -1861,7 +1911,8 @@ main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .progress-line {
   transform: scaleX(0);
   transform-origin: left;
   border-radius: 10px;
-  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  animation: animatebar 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  -webkit-animation: animatebar 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .progress-line span {
   height: 100%;
@@ -1870,7 +1921,8 @@ main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .progress-line sp
   transform: scaleX(0);
   transform-origin: right;
   background: #FF7B00;
-  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  animation: animatebar 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  -webkit-animation: animatebar 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 main.ProfileUser .Containers .Left .Section-2 {
   width: 100%;
@@ -2428,7 +2480,6 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 .Bascket-Popup .Container .Top .Close .Ci {
   padding: 10px;
@@ -2445,6 +2496,8 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   flex-direction: column;
   gap: 0.8em;
   margin-top: 3em;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .Bascket-Popup .Container .Basket-Items .BasketItem {
   width: 99%;
@@ -2634,30 +2687,86 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   }
 }
 
-main.CourseShow {
+.CourseList {
   overflow: hidden;
 }
-@media only screen and (max-width: 800px) {
-  main.CourseShow svg {
-    width: 30px;
+.CourseList .searchContainer {
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+.CourseList button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.CourseList .searchContainer input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: #989595;
+  border: none;
+  padding-right: 35px;
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+}
+.CourseList .searchContainer input::-moz-placeholder {
+  font-size: 20px;
+  font-weight: 400;
+  opacity: 1;
+  line-height: 34.55px;
+  color: #fff;
+}
+.CourseList .searchContainer input::placeholder {
+  font-size: 20px;
+  font-weight: 400;
+  opacity: 1;
+  line-height: 34.55px;
+  color: #fff;
+}
+@media only screen and (max-width: 1000px) {
+  .CourseList .searchContainer input::-moz-placeholder {
+    font-size: 10px;
+  }
+  .CourseList .searchContainer input::placeholder {
+    font-size: 10px;
   }
 }
-main.CourseShow .BannerC {
+.CourseList .searchContainer .inputBox {
+  width: 342px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.CourseList .searchContainer .inputBox span {
+  width: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+.CourseList .BannerC {
   overflow: hidden;
   width: 100%;
-  max-height: 337px;
+  height: 260px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  background-color: #606060;
 }
-@media only screen and (max-width: 800px) {
-  main.CourseShow .BannerC {
-    max-height: unset;
-    height: 100vh;
-  }
-}
-main.CourseShow .BannerC::before {
+.CourseList .BannerC::before {
   content: "";
   position: absolute;
   left: 0;
@@ -2667,820 +2776,367 @@ main.CourseShow .BannerC::before {
   z-index: 1;
   background-color: rgba(36, 35, 35, 0.39);
 }
-main.CourseShow .BannerC > img {
-  width: 100%;
-  max-height: 337px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media only screen and (max-width: 800px) {
-  main.CourseShow .BannerC > img {
-    max-height: unset;
-    height: 100%;
-  }
-}
-main.CourseShow .BannerC .overlay {
+.CourseList .BannerC .overlay {
   position: absolute;
   left: 0;
   bottom: 0;
   margin-top: auto;
-  width: 92%;
+  width: 93%;
   height: 35%;
   z-index: 2;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: flex-end;
   gap: 0em;
+  right: 0;
+  margin: auto;
+  margin-bottom: 1em;
 }
-@media only screen and (max-width: 800px) {
-  main.CourseShow .BannerC .overlay {
+@media only screen and (max-width: 650px) {
+  .CourseList .BannerC .overlay {
+    flex-direction: column;
     height: 100%;
     width: 100%;
+    align-items: center;
     justify-content: flex-end;
+    margin-bottom: 2em;
   }
 }
-main.CourseShow .BannerC .overlay .Title {
-  width: 100%;
+.CourseList .BannerC .overlay .Title {
+  width: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-@media only screen and (max-width: 800px) {
-  main.CourseShow .BannerC .overlay .Title {
-    margin-right: auto;
-    width: 90%;
+@media only screen and (max-width: 650px) {
+  .CourseList .BannerC .overlay .Title {
+    width: 100%;
+    justify-content: center;
   }
 }
-main.CourseShow .BannerC .overlay .Title h1 {
+.CourseList .BannerC .overlay .Title h1 {
   font-size: 36px;
   font-weight: 900;
   line-height: 62.18px;
   color: #fff;
 }
 @media only screen and (max-width: 1000px) {
-  main.CourseShow .BannerC .overlay .Title h1 {
+  .CourseList .BannerC .overlay .Title h1 {
     font-size: 20px;
   }
 }
-main.CourseShow .BroadCrumbs {
+.CourseList .Containers {
+  width: 93%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.CourseList .Containers .Top {
   width: 100%;
   display: flex;
-}
-@media only screen and (max-width: 800px) {
-  main.CourseShow .BroadCrumbs {
-    margin-right: auto;
-    width: 90%;
-    margin-bottom: 3em;
-  }
-}
-main.CourseShow .BroadCrumbs ul {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 30px;
-}
-main.CourseShow .BroadCrumbs ul .nav-Item {
-  width: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-main.CourseShow .BroadCrumbs ul .nav-Item:first-child {
-  padding-right: 0;
-}
-main.CourseShow .BroadCrumbs ul .nav-Item:not(:last-child)::before {
-  content: ">";
-  position: absolute;
-  right: 100%;
-  top: 25%;
-  font-size: 20px;
-  color: #fff;
-  padding: 0 10px;
-}
-main.CourseShow .BroadCrumbs ul .nav-Link {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34.55px;
-  color: #fff;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .BroadCrumbs ul .nav-Link {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-main.CourseShow .Containers {
-  width: 90%;
-  display: flex;
-  display: grid;
-  grid-template-columns: 65% 35%;
-  margin: 2em auto;
+  flex-direction: column;
+  margin-top: 2em;
   gap: 2em;
 }
-@media only screen and (max-width: 800px) {
-  main.CourseShow .Containers {
-    display: flex;
-    flex-direction: column;
-  }
-}
-main.CourseShow .FixedSection {
-  width: 100%;
+.CourseList .Containers .Top .Filters {
+  width: 99%;
   display: flex;
-  flex-direction: column;
-  position: sticky;
-  gap: 1em;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 0.5em;
+  margin-left: auto;
 }
-main.CourseShow .FixedSection .BasketDetail {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #fff;
-  padding: 15px;
-}
-main.CourseShow .FixedSection .basket-Item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .FixedSection .basket-Item {
+@media only screen and (max-width: 650px) {
+  .CourseList .Containers .Top .Filters {
     justify-content: center;
-    gap: 0.5em;
-    padding: 0;
+    align-items: center;
   }
 }
-main.CourseShow .FixedSection .basket-Item .PriceM, main.CourseShow .FixedSection .basket-Item .Price {
+.CourseList .Containers .Top .Filters .Circle {
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main.CourseShow .FixedSection .basket-Item .PriceM p, main.CourseShow .FixedSection .basket-Item .Price p {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34.55px;
-  color: #fff;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .FixedSection .basket-Item .PriceM p, main.CourseShow .FixedSection .basket-Item .Price p {
-    font-size: 10px;
-  }
-}
-main.CourseShow .FixedSection .basket-Item .Price p {
-  font-size: 36px;
-  font-weight: 900;
-  line-height: 62.18px;
-  color: #fff;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .FixedSection .basket-Item .Price p {
-    font-size: 20px;
-  }
-}
-main.CourseShow .FixedSection .basket-Item button.AddTOBasket {
-  width: 100%;
+.CourseList .Containers .Top .Filters .Circle span {
+  width: 46px;
+  height: 46px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5em;
-  border-radius: 35px;
-  padding: 20px 0;
-  background-color: #FF7B00;
-  -webkit-border-radius: 35px;
-  -moz-border-radius: 35px;
-  -ms-border-radius: 35px;
-  -o-border-radius: 35px;
-  border: none;
-  outline: none;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .FixedSection .basket-Item button.AddTOBasket {
-    padding: 5px 0;
-  }
-}
-main.CourseShow .FixedSection .basket-Item button.AddTOBasket > span {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34.55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .FixedSection .basket-Item button.AddTOBasket > span {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-main.CourseShow .FixedSection .basket-Item .RateC {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-main.CourseShow .FixedSection .basket-Item .RateC .Scores {
-  width: 50%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-main.CourseShow .FixedSection .basket-Item .RateC .Scores span {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34.55px;
-  color: #fff;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .FixedSection .basket-Item .RateC .Scores span {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-main.CourseShow .FixedSection .basket-Item .RateC .rating {
-  display: flex;
-  width: 50%;
-  justify-content: center;
-  overflow: hidden;
-  flex-direction: row-reverse;
-  position: relative;
-}
-main.CourseShow .FixedSection .basket-Item .RateC .rating .rating-0 {
-  filter: grayscale(100%);
-}
-main.CourseShow .FixedSection .basket-Item .RateC .rating > input {
-  display: none;
-}
-main.CourseShow .FixedSection .basket-Item .RateC .rating > label {
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  background-image: url("/images/solar_star-linear (1).svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 76%;
-  transition: 0.3s;
-}
-main.CourseShow .FixedSection .basket-Item .RateC .rating > input:checked ~ label,
-main.CourseShow .FixedSection .basket-Item .RateC .rating > input:checked ~ label ~ label {
-  background-image: url("/images/Vector (16).svg");
-}
-main.CourseShow .FixedSection .basket-Item .RateC .rating > input:not(:checked) ~ label:hover,
-main.CourseShow .FixedSection .basket-Item .RateC .rating > input:not(:checked) ~ label:hover ~ label {
-  background-image: url("/images/Vector (16).svg");
-}
-main.CourseShow .FixedSection .Course-Detail {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #fff;
-  padding: 15px;
-}
-main.CourseShow .FixedSection .Course-Detail > .Row {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5em;
-  padding: 10px 0;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .FixedSection .Course-Detail > .Row {
-    padding: 0;
-  }
-}
-main.CourseShow .FixedSection .Course-Detail > .Row .Icon {
-  width: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main.CourseShow .FixedSection .Course-Detail > .Row .Content {
-  width: 90%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0.4em;
-}
-main.CourseShow .FixedSection .Course-Detail > .Row .Content .Question, main.CourseShow .FixedSection .Course-Detail > .Row .Content .Answer {
-  width: auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-main.CourseShow .FixedSection .Course-Detail > .Row .Content .Question p, main.CourseShow .FixedSection .Course-Detail > .Row .Content .Answer p {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34.55px;
-  color: #fff;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .FixedSection .Course-Detail > .Row .Content .Question p, main.CourseShow .FixedSection .Course-Detail > .Row .Content .Answer p {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-main.CourseShow .FixedSection .Course-Detail > .Row-first {
-  justify-content: center;
-  gap: 0.5em;
-  margin-bottom: 0.8em;
-}
-main.CourseShow .FixedSection .Course-Detail > .Row-first .Icon, main.CourseShow .FixedSection .Course-Detail > .Row-first .Content {
-  width: auto;
-}
-main.CourseShow .FixedSection .Course-Lecturer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #fff;
-  padding: 15px;
-  gap: 1.5em;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .FixedSection .Course-Lecturer {
-    padding: 0 10px;
-  }
-}
-main.CourseShow .FixedSection .Course-Lecturer .IMG-Lecturer {
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main.CourseShow .FixedSection .Course-Lecturer .IMG-Lecturer .Circle {
-  width: 100%;
   border-radius: 50%;
+  background-color: #fff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  min-height: 100px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-main.CourseShow .FixedSection .Course-Lecturer .IMG-Lecturer .Circle > img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main.CourseShow .FixedSection .Course-Lecturer .Detaile-Lecturer {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 1em;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .FixedSection .Course-Lecturer .Detaile-Lecturer {
-    gap: 0;
-  }
-}
-main.CourseShow .FixedSection .Course-Lecturer .Detaile-Lecturer .Name, main.CourseShow .FixedSection .Course-Lecturer .Detaile-Lecturer .Det {
-  width: auto;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-main.CourseShow .FixedSection .Course-Lecturer .Detaile-Lecturer .Name p {
-  text-align: right;
-  font-size: 36px;
-  font-weight: 900;
-  line-height: 62.18px;
-  color: #fff;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .FixedSection .Course-Lecturer .Detaile-Lecturer .Name p {
-    font-size: 20px;
-    line-height: 25px;
-  }
-}
-main.CourseShow .FixedSection .Course-Lecturer .Detaile-Lecturer .Det p {
-  text-align: right;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34.55px;
-  color: #fff;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .FixedSection .Course-Lecturer .Detaile-Lecturer .Det p {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-main.CourseShow .CoursesTextS {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-main.CourseShow .CoursesTextS .Box {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-main.CourseShow .CoursesTextS .Box > .IMG {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main.CourseShow .CoursesTextS .Box > .IMG > img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main.CourseShow .CoursesTextS .Box .Title {
+.CourseList .Containers .Top .Titles {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
 }
-main.CourseShow .CoursesTextS .Box .Title p {
+.CourseList .Containers .Top .Titles h2 {
   font-size: 24px;
   font-weight: 700;
   line-height: 41.45px;
   color: #fff;
 }
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Title p {
-    font-size: 14px;
-    line-height: 30px;
-  }
-}
-main.CourseShow .CoursesTextS .Box .Text {
-  width: 100%;
+.CourseList .Containers .Top .SelectBoxes {
+  width: auto;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
   flex-direction: column;
+  align-items: flex-end;
+  gap: 2vh;
 }
-main.CourseShow .CoursesTextS .Box .Text p {
+.CourseList .Containers .Top .SelectBoxes .select_wrap {
+  width: -moz-max-content;
+  width: max-content;
+  margin: 15px unset;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap .option {
+  display: flex;
+  align-items: center;
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap .option p {
   font-size: 20px;
   font-weight: 400;
   line-height: 34.55px;
   color: #fff;
 }
 @media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Text p {
+  .CourseList .Containers .Top .SelectBoxes .select_wrap .option p {
     font-size: 10px;
     line-height: 20px;
   }
 }
-main.CourseShow .CoursesTextS .Box .VideoContainer {
+.CourseList .Containers .Top .SelectBoxes .select_wrap .option .icon {
+  background: url("images/akar-icons_sort.svg") no-repeat 0 0;
+  width: 32px;
+  height: 32px;
+  margin-right: 15px;
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap.active .select_ul {
+  display: block;
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap .select_ul {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 0.5em;
+  background: #989595;
+  border-radius: 5px;
+  display: none;
+  z-index: 2;
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap .select_ul li {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #fff;
+  padding: 10px 1em;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1000px) {
+  .CourseList .Containers .Top .SelectBoxes .select_wrap .select_ul li {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap .select_ul li:first-child:hover {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap .select_ul li:last-child:hover {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap .select_ul li:hover {
+  background: #FF7B00;
+  color: #fff !important;
+}
+.CourseList .Containers .Top .SelectBoxes .select_wrap .select_ul li:hover p {
+  color: #fff !important;
+}
+.CourseList .Containers .Top .SelectBoxes .default_option {
+  border-radius: 5px;
+  min-width: 280px;
+  background: #989595;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+  display: flex;
+  gap: 0.5em;
+}
+@media only screen and (max-width: 1000px) {
+  .CourseList .Containers .Top .SelectBoxes .default_option {
+    padding: 10px 0;
+  }
+}
+.CourseList .Containers .Top .SelectBoxes .default_option::before {
+  content: url("/images/akar-icons_sort.svg");
+  position: relative;
+  top: 13px;
+  right: 11px;
+}
+@media only screen and (max-width: 1000px) {
+  .CourseList .Containers .Top .SelectBoxes .default_option::before {
+    top: 2px;
+  }
+}
+.CourseList .Containers .Top .SelectBoxes .default_option > li {
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  padding: 6px 0;
+  padding-right: 0.5em;
+  margin-left: 1.5em;
+}
+@media only screen and (max-width: 1000px) {
+  .CourseList .Containers .Top .SelectBoxes .default_option > li {
+    padding: 0;
+    padding-right: 0.5em;
+  }
+}
+.CourseList .Containers .CourseLists {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5em;
+  margin-top: 1em;
+  position: relative;
+  margin-bottom: 10em;
+}
+@media only screen and (max-width: 650px) {
+  .CourseList .Containers .CourseLists {
+    grid-template-columns: 1fr;
+  }
+}
+.CourseList .Containers .CourseLists .seeMore {
+  transition: all 0.5s ease;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #FF7B00;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px 40px;
+  border-radius: 48px;
+  -webkit-border-radius: 48px;
+  -moz-border-radius: 48px;
+  -ms-border-radius: 48px;
+  -o-border-radius: 48px;
+  justify-self: center;
+  place-content: center;
+  place-items: center;
+  place-self: center;
+  bottom: -4em;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+@media only screen and (max-width: 650px) {
+  .CourseList .Containers .CourseLists .seeMore {
+    font-size: 10px;
+    padding: 5px 30px;
+    bottom: -6em;
+  }
+}
+.CourseList .Containers .CourseLists .seeMore:hover {
+  cursor: pointer;
+  background-color: #FF7B00;
+}
+.CourseList .Containers .CourseLists .Course {
+  width: 100%;
+  display: none;
+}
+.CourseList .Containers .CourseLists .Course > a {
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
-  margin-bottom: 2em;
-  margin-top: 5vh;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.7s ease;
+  gap: 0.8em;
 }
-main.CourseShow .CoursesTextS .Box .VideoContainer Video {
+.CourseList .Containers .CourseLists .Course > a .IMG {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.CourseList .Containers .CourseLists .Course > a .IMG > img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main.CourseShow .CoursesTextS .Box .VideoContainer .Video {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: relative;
-  flex-direction: column;
-  overflow: hidden;
-}
-main.CourseShow .CoursesTextS .Box .VideoContainer .Video :hover {
-  cursor: pointer;
-}
-main.CourseShow .CoursesTextS .Box .VideoContainer .Video.toggle .ov {
-  left: -100%;
-}
-main.CourseShow .CoursesTextS .Box .VideoContainer .ov {
+.CourseList .Containers .CourseLists .Course > a .IMG .OV {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.7s ease;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  transition: all 0.2s;
-  pointer-events: none;
-  background-color: rgba(0, 0, 0, 0.631372549);
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  -o-transition: all 0.2s;
+  overflow: hidden;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
 }
-main.CourseShow .CoursesTextS .Box .VideoContainer .play {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main.CourseShow .CoursesTextS .Box .VideoContainer .play:hover {
-  cursor: pointer;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  border: 1px solid #fff;
-  padding: 30px 25px;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .free {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 41.45px;
-  color: #FF7B00;
-  margin-right: 0.8em;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Courses-Videos-C .free {
-    font-size: 14px;
-    line-height: 30px;
-  }
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C > .Title {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C > .Title h2 {
-  font-size: 36px;
-  font-weight: 900;
-  line-height: 62.18px;
-  color: #fff;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Courses-Videos-C > .Title h2 {
-    font-size: 20px;
-  }
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .DropService {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 20px 0;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service:not(:last-child) {
-  border-bottom: 1px solid #fff;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .nav {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 2em;
-}
-@media only screen and (max-width: 800px) {
-  main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .nav {
-    flex-direction: column;
-    gap: 0;
-  }
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .nav .Icon {
-  width: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .nav.active .Icon svg, main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .nav.active .Icon path {
-  fill: #FF7B00;
-  stroke: #FF7B00;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .nav .Detail {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .nav .Detail > .Titlee {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .nav .Detail > .Titlee p {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 41.45px;
-  color: #fff;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .nav .Detail > .Titlee p {
-    font-size: 14px;
-    line-height: 30px;
-  }
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .nav .Detail > .Det {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .nav .Detail > .Det p {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34.55px;
-  color: #fff;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .nav .Detail > .Det p {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .DropMenu {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .DropMenu .DropItem {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .DropMenu Video {
+.CourseList .Containers .CourseLists .Course > a .IMG .OV img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .DropMenu .Video {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: relative;
-  flex-direction: column;
-  overflow: hidden;
-  margin: 30px 0;
+.CourseList .Containers .CourseLists .Course > a .IMG:hover .OV {
+  opacity: 1;
 }
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .DropMenu .Video :hover {
-  cursor: pointer;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .DropMenu .Video.toggle .ov {
-  left: -100%;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .DropMenu .ov {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  transition: all 0.2s;
-  pointer-events: none;
-  background-color: rgba(0, 0, 0, 0.631372549);
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  -o-transition: all 0.2s;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .DropMenu .play {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .Service .DropMenu .play:hover {
-  cursor: pointer;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .SendContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  margin-top: 2em;
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .SendContainer p {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 41.45px;
-  color: #FF7B00;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .SendContainer p {
-    font-size: 14px;
-    line-height: 30px;
-  }
-}
-main.CourseShow .CoursesTextS .Box .Courses-Videos-C .Tabs-Container .SendContainer textarea {
-  width: 100%;
-  resize: none;
-  border: 1px solid #fff;
-  color: #fff;
-  background-color: transparent;
-}
-main.CourseShow .CoursesTextS .Box .Related-Courses {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  border: 1px solid #fff;
-  padding: 30px 25px;
-  margin-top: 4em;
-}
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Title {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Title h3 {
-  font-size: 36px;
-  font-weight: 900;
-  line-height: 62.18px;
-  color: #fff;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Related-Courses > .Title h3 {
-    font-size: 20px;
-  }
-}
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: hidden;
-  margin-top: 2em;
-}
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-wrapper {
-  width: 100%;
-}
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-}
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .IMG {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .IMG > img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc {
+.CourseList .Containers .CourseLists .Course > a .Desc {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .Tit {
+.CourseList .Containers .CourseLists .Course > a .Desc .Tit {
   width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .Tit p {
+.CourseList .Containers .CourseLists .Course > a .Desc .Tit p {
   font-size: 36px;
   font-weight: 900;
   line-height: 62.18px;
@@ -3488,18 +3144,18 @@ main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-co
   text-align: right;
 }
 @media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .Tit p {
+  .CourseList .Containers .CourseLists .Course > a .Desc .Tit p {
     font-size: 20px;
   }
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .det {
+.CourseList .Containers .CourseLists .Course > a .Desc .det {
   width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
   flex-direction: column;
 }
-main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .det p {
+.CourseList .Containers .CourseLists .Course > a .Desc .det p {
   font-size: 20px;
   font-weight: 400;
   line-height: 34.55px;
@@ -3507,1003 +3163,7 @@ main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-co
   text-align: justify;
 }
 @media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Related-Courses > .Courses-slider .swiper-course .swiper-slide > a .Desc .det p {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-main.CourseShow .CoursesTextS .Box .Comments-C {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  border: 1px solid #fff;
-  padding: 30px 25px;
-  margin-top: 4em;
-}
-main.CourseShow .CoursesTextS .Box .Comments-C > .Title {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-main.CourseShow .CoursesTextS .Box .Comments-C > .Title h4 {
-  font-size: 36px;
-  font-weight: 900;
-  line-height: 62.18px;
-  color: #fff;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Comments-C > .Title h4 {
-    font-size: 20px;
-  }
-}
-main.CourseShow .CoursesTextS .Box .Comments-C > .Courses-Comment {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment {
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1em;
-}
-@media only screen and (max-width: 800px) {
-  main.CourseShow .CoursesTextS .Box .Comments-C .Comment {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0;
-  }
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment:not(:last-child) .Content {
-  border-bottom: 1px solid #fff;
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment .UserIcon {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment .UserIcon .Circle {
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  background-color: #D9D9D9;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8em;
-  padding: 40px 0;
-}
-@media only screen and (max-width: 800px) {
-  main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content {
-    padding: 0;
-  }
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Top {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Top .Infos {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Top .Infos .UserName {
-  width: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Top .Infos .UserName p {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 41.45px;
-  color: #fff;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Top .Infos .UserName p {
-    font-size: 14px;
-    line-height: 30px;
-  }
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Top .Date {
-  width: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Top .Date span {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34.55px;
-  color: #fff;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Top .Date span {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Bottom {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Bottom .row {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  gap: 0.8em;
-}
-@media only screen and (max-width: 800px) {
-  main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Bottom .row {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Bottom .row .Question, main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Bottom .row .Answer {
-  width: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Bottom .row .Question {
-  width: -moz-max-content;
-  width: max-content;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Bottom .row .Question p {
-  text-align: right;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 41.45px;
-  color: #fff;
-  width: -moz-max-content;
-  width: max-content;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Bottom .row .Question p {
-    font-size: 14px;
-    line-height: 30px;
-  }
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Bottom .row .Answer {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Bottom .row .Answer p {
-  text-align: right;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34.55px;
-  color: #fff;
-}
-@media only screen and (max-width: 1000px) {
-  main.CourseShow .CoursesTextS .Box .Comments-C .Comment .Content .Bottom .row .Answer p {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .rating {
-  display: flex;
-  width: 50%;
-  justify-content: center;
-  overflow: hidden;
-  flex-direction: row-reverse;
-  position: relative;
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .rating .rating-0 {
-  filter: grayscale(100%);
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .rating > input {
-  display: none;
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .rating > label {
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  background-image: url("/images/solar_star-linear (1).svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 76%;
-  transition: 0.3s;
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .rating > input:checked ~ label,
-main.CourseShow .CoursesTextS .Box .Comments-C .rating > input:checked ~ label ~ label {
-  background-image: url("/images/Vector (16).svg");
-}
-main.CourseShow .CoursesTextS .Box .Comments-C .rating > input:not(:checked) ~ label:hover,
-main.CourseShow .CoursesTextS .Box .Comments-C .rating > input:not(:checked) ~ label:hover ~ label {
-  background-image: url("/images/Vector (16).svg");
-}
-
-main.ProfileUser {
-  width: 100%;
-}
-main.ProfileUser .Containers {
-  margin: 0 auto;
-  width: 90%;
-  display: grid;
-  grid-template-columns: 25% 75%;
-  margin-top: 13em;
-  gap: 1.2em;
-  padding-bottom: 5em;
-}
-@media only screen and (max-width: 800px) {
-  main.ProfileUser .Containers {
-    display: flex;
-    flex-direction: column;
-  }
-}
-main.ProfileUser .Containers .Right {
-  width: 100%;
-  display: flex;
-  position: sticky;
-  height: -moz-fit-content;
-  height: fit-content;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  border: 1px solid #000000;
-  top: 10em;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-}
-@media only screen and (max-width: 800px) {
-  main.ProfileUser .Containers .Right {
-    background-color: #fff;
-    z-index: 100;
-    flex-direction: row;
-    top: 6em;
-  }
-}
-main.ProfileUser .Containers .UserInfoBox {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-@media only screen and (max-width: 800px) {
-  main.ProfileUser .Containers .UserInfoBox {
-    flex-direction: row;
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 600px) {
-  main.ProfileUser .Containers .UserInfoBox {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-main.ProfileUser .Containers .UserInfoBox .Title {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0.8em;
-}
-@media only screen and (max-width: 800px) {
-  main.ProfileUser .Containers .UserInfoBox .Title {
-    width: 45%;
-  }
-}
-@media only screen and (max-width: 600px) {
-  main.ProfileUser .Containers .UserInfoBox .Title {
-    width: auto;
-  }
-}
-main.ProfileUser .Containers .UserInfoBox .Title h1 {
-  width: 80%;
-  font-size: 36px;
-  font-weight: 900;
-  line-height: 62.18px;
-  color: #000000;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .UserInfoBox .Title h1 {
-    font-size: 20px;
-  }
-}
-main.ProfileUser .Containers .UserInfoBox .Title .Circle {
-  width: 57px;
-  border-radius: 50%;
-  min-height: 57px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main.ProfileUser .Containers .UserInfoBox .Title .Circle > img {
-  min-height: 60px;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-main.ProfileUser .Containers .navBox {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1em;
-  margin-top: 1.5em;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .navBox {
-    gap: 1em;
-    justify-content: flex-end;
-    flex-direction: row;
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 600px) {
-  main.ProfileUser .Containers .navBox {
-    justify-content: center;
-    align-items: center;
-  }
-}
-main.ProfileUser .Containers .navBox .Item {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-}
-@media only screen and (max-width: 800px) {
-  main.ProfileUser .Containers .navBox .Item {
-    width: auto;
-  }
-}
-main.ProfileUser .Containers .navBox .Item .AnchorLink {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34.55px;
-  color: #000000;
-  position: relative;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .navBox .Item .AnchorLink {
-    font-size: 10px;
-    line-height: 15px;
-  }
-}
-main.ProfileUser .Containers .navBox .Item.active .AnchorLink {
-  color: #FF7B00;
-}
-main.ProfileUser .Containers .navBox .Item.active .AnchorLink::before {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 1px;
-  background-color: #FF7B00;
-}
-main.ProfileUser .Containers .Left {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-main.ProfileUser .Containers .Left .Boxes {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-main.ProfileUser .Containers .Left .Sec {
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-}
-main.ProfileUser .Containers .Left .Sec > .title {
-  width: 95%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-main.ProfileUser .Containers .Left .Sec > .title p {
-  text-align: right;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 41.45px;
-  color: #000000;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Sec > .title p {
-    font-size: 14px;
-  }
-}
-main.ProfileUser .Containers .Left .Sec > .text {
-  width: 95%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-main.ProfileUser .Containers .Left .Sec > .text p {
-  text-align: right;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34.55px;
-  color: #000000;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Sec > .text p {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-main.ProfileUser .Containers .Left .Section-1 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #000000;
-  padding: 3em 0;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Section-1 {
-    padding: 0.8em 0;
-  }
-}
-main.ProfileUser .Containers .Left .Section-1 .skills-bar {
-  width: 95%;
-  margin: 0 auto;
-  border-radius: 10px;
-  gap: 1em;
-  display: flex;
-  flex-direction: column;
-  margin-top: 0.8em;
-}
-main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .info {
-  margin-bottom: 5px;
-  display: flex;
-  justify-content: space-between;
-}
-main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .info > span {
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 62.18px;
-  opacity: 0;
-  animation: showText 0.5s 1s linear forwards;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .info > span {
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .info .Box {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1.2em;
-}
-main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .info .Box span {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 34.55px;
-  opacity: 0;
-  animation: showText2 0.5s 1.5s linear forwards;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .info .Box span {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .progress-line {
-  height: 10px;
-  width: 100%;
-  background: #D9D9D9;
-  position: relative;
-  transform: scaleX(0);
-  transform-origin: left;
-  border-radius: 10px;
-  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-}
-main.ProfileUser .Containers .Left .Section-1 .skills-bar .bar .progress-line span {
-  height: 100%;
-  position: absolute;
-  border-radius: 10px;
-  transform: scaleX(0);
-  transform-origin: right;
-  background: #FF7B00;
-  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-}
-main.ProfileUser .Containers .Left .Section-2 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #000000;
-  padding: 3em 0;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Section-2 {
-    padding: 0.8em 0;
-  }
-}
-main.ProfileUser .Containers .Left .Section-2 .Inner {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-top: 0.8em;
-}
-main.ProfileUser .Containers .Left .Section-2 .Inner .Btn {
-  width: -moz-max-content;
-  width: max-content;
-  padding: 14px 90px;
-  background-color: #FF7B00;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 35px;
-  -webkit-border-radius: 35px;
-  -moz-border-radius: 35px;
-  -ms-border-radius: 35px;
-  -o-border-radius: 35px;
-  color: #fff;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 400;
-  margin-right: auto;
-  line-height: 34.55px;
-  margin-left: 3%;
-  margin-top: 30px;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Section-2 .Inner .Btn {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  main.ProfileUser .Containers .Left .Section-2 .Inner .Btn {
-    margin: 0 auto;
-  }
-}
-main.ProfileUser .Containers .Left .Section-2 .Inner .Btn:hover {
-  background-color: transparent;
-  color: #000000;
-  border: 1px solid #FF7B00;
-}
-main.ProfileUser .Containers .Left .Section-2 .SelectBoxes {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 2vh;
-}
-main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap {
-  width: 100%;
-  min-height: 44px;
-  margin: 15px auto;
-  position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap.active .default_option:before {
-  top: 25px;
-  transform: rotate(-225deg);
-}
-main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .option {
-  display: flex;
-  align-items: center;
-}
-main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .option p {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34.55px;
-  color: #000000;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .option p {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .option .icon {
-  background: url("https://i.imgur.com/oEZu0sK.png") no-repeat 0 0;
-  width: 32px;
-  height: 32px;
-  margin-right: 15px;
-}
-main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap.active .select_ul {
-  display: block;
-}
-main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .select_ul {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  width: 95%;
-  margin: 0 auto;
-  margin-top: 0.5em;
-  background: #fff;
-  border-radius: 5px;
-  display: none;
-  z-index: 2;
-  border: 1px solid #000000;
-}
-main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .select_ul li {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34.55px;
-  color: #000000;
-  padding: 10px 1em;
-  cursor: pointer;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .select_ul li {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .select_ul li:first-child:hover {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .select_ul li:last-child:hover {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .select_ul li:hover {
-  background: #FF7B00;
-  color: #fff !important;
-}
-main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .select_wrap .select_ul li:hover p {
-  color: #fff !important;
-}
-main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .default_option {
-  min-height: 44px;
-  border-radius: 5px;
-  background: #fff;
-  position: relative;
-  cursor: pointer;
-  width: 95%;
-  margin: 0 auto;
-  border: 1px solid #000000;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-}
-main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .default_option::before {
-  content: "";
-  position: absolute;
-  top: 18px;
-  left: 30px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid;
-  border-color: transparent transparent #555555 #555555;
-  transform: rotate(-45deg);
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .default_option::before {
-    top: 14px;
-    width: 10px;
-    height: 10px;
-  }
-}
-main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .default_option > li {
-  min-height: 44px;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-  display: flex;
-  justify-content: flex-start;
-  align-content: center;
-  align-items: center;
-  padding: 10px 0;
-  padding-right: 0.5em;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Section-2 .SelectBoxes .default_option > li {
-    padding: 0;
-    padding-right: 0.5em;
-  }
-}
-main.ProfileUser .Containers .Left .Section-3 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #000000;
-  padding: 3em 0;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Section-3 {
-    padding: 0.8em 0;
-  }
-}
-main.ProfileUser .Containers .Left .Section-3 .Inner-pr {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-top: 1.5em;
-  gap: 0.8em;
-}
-main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Prr {
-  width: 95%;
-  margin: 0 auto;
-  padding: 10px 0;
-  padding-right: 0.5em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #000000;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-}
-@media only screen and (max-width: 600px) {
-  main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Prr {
-    padding-right: 0;
-  }
-}
-main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Prr a {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Des {
-  width: auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-@media only screen and (max-width: 600px) {
-  main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Des {
-    margin-right: 10px;
-  }
-}
-main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Des p {
-  text-align: right;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34.55px;
-  color: #000000;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Des p {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Det {
-  width: auto;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 0.8em;
-  margin-left: 3%;
-}
-main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Det .Date {
-  width: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Det .Date p {
-  text-align: right;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34.55px;
-  color: rgba(0, 0, 0, 0.5019607843);
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Det .Date p {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-main.ProfileUser .Containers .Left .Section-3 .Inner-pr .Det .Icon {
-  width: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main.ProfileUser .Containers .Left .Section-4 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #000000;
-  padding: 3em 0;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Section-4 {
-    padding: 0.8em 0;
-  }
-}
-main.ProfileUser .Containers .Left .Section-4 > .title {
-  justify-content: space-between;
-}
-main.ProfileUser .Containers .Left .Section-4 > .title .Date {
-  color: rgba(0, 0, 0, 0.5019607843);
-  text-align: right;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34.55px;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Section-4 > .title .Date {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-main.ProfileUser .Containers .Left .Section-4 .Btn {
-  width: -moz-max-content;
-  width: max-content;
-  padding: 14px 90px;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 35px;
-  -webkit-border-radius: 35px;
-  -moz-border-radius: 35px;
-  -ms-border-radius: 35px;
-  -o-border-radius: 35px;
-  color: #000000;
-  text-align: center;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  font-size: 20px;
-  font-weight: 400;
-  margin-right: auto;
-  line-height: 34.55px;
-  margin-left: 3%;
-  margin-top: 30px;
-  border: 1px solid #FF7B00;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Section-4 .Btn {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  main.ProfileUser .Containers .Left .Section-4 .Btn {
-    margin: 0 auto;
-    margin-top: 30px;
-  }
-}
-main.ProfileUser .Containers .Left .Section-4 .Btn:hover {
-  background-color: #FF7B00;
-  color: #fff;
-}
-main.ProfileUser .Containers .Left .Section-4 form {
-  width: 95%;
-  margin: 0 auto;
-  display: flex;
-  gap: 0.5em;
-  justify-content: center;
-  margin-top: 2em;
-}
-@media only screen and (max-width: 600px) {
-  main.ProfileUser .Containers .Left .Section-4 form {
-    flex-direction: column;
-  }
-}
-main.ProfileUser .Containers .Left .Section-4 form .Col {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8em;
-}
-@media only screen and (max-width: 600px) {
-  main.ProfileUser .Containers .Left .Section-4 form .Col {
-    width: 100%;
-  }
-}
-main.ProfileUser .Containers .Left .Section-4 form .Col .InputBox {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-main.ProfileUser .Containers .Left .Section-4 form .Col input {
-  width: 100%;
-  padding: 10px 0;
-  color: #000000;
-  text-align: right;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34.55px;
-  outline: none;
-  border: 1px solid #000000;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-  padding-right: 0.8em;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Section-4 form .Col input {
-    font-size: 10px;
-    line-height: 20px;
-  }
-}
-main.ProfileUser .Containers .Left .Section-4 form .Col input::-moz-placeholder {
-  font-size: 20px;
-  opacity: 1;
-  font-weight: 400;
-  line-height: 34.55px;
-  color: #000000;
-}
-main.ProfileUser .Containers .Left .Section-4 form .Col input:-moz-placeholder-shown {
-  font-size: 20px;
-  opacity: 1;
-  font-weight: 400;
-  line-height: 34.55px;
-  color: #000000;
-}
-main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main.ProfileUser .Containers .Left .Section-4 form .Col input:placeholder-shown {
-  font-size: 20px;
-  opacity: 1;
-  font-weight: 400;
-  line-height: 34.55px;
-  color: #000000;
-}
-@media only screen and (max-width: 1000px) {
-  main.ProfileUser .Containers .Left .Section-4 form .Col input::-moz-placeholder {
-    font-size: 10px;
-    line-height: 20px;
-  }
-  main.ProfileUser .Containers .Left .Section-4 form .Col input:-moz-placeholder-shown {
-    font-size: 10px;
-    line-height: 20px;
-  }
-  main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main.ProfileUser .Containers .Left .Section-4 form .Col input:placeholder-shown {
+  .CourseList .Containers .CourseLists .Course > a .Desc .det p {
     font-size: 10px;
     line-height: 20px;
   }
@@ -4542,8 +3202,9 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
 }
 .aboutUs .section2 {
   display: flex;
-  width: 83%;
+  width: 93%;
   margin: 0 auto;
+  overflow: hidden;
 }
 @media only screen and (max-width: 980px) {
   .aboutUs .section2 {
@@ -4618,7 +3279,7 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   -moz-column-gap: 48px;
        column-gap: 48px;
   align-items: end;
-  width: 83%;
+  width: 93%;
   margin: 240px auto 0 auto;
 }
 @media only screen and (max-width: 980px) {
@@ -5191,7 +3852,7 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
 }
 .home .section2 .midSec .in2 {
   display: flex;
-  width: 83%;
+  width: 92%;
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -5432,7 +4093,7 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
 .home .section4 .detailSec {
   display: flex;
   justify-content: space-between;
-  width: 85%;
+  width: 92%;
   margin: 0 auto;
   padding: 39px 0;
   position: relative;
@@ -5524,7 +4185,7 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   line-height: 41.45px;
   text-align: right;
   color: white;
-  margin-right: 13%;
+  margin-right: 7%;
   margin-bottom: 50px;
   display: block;
 }
@@ -5539,7 +4200,7 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   position: relative;
 }
 .home .section4 .list .inList ul li {
-  padding: 25px 13% 25px 0;
+  padding: 25px 7% 25px 0;
   cursor: pointer;
   border-bottom: 1px solid white;
   background-image: linear-gradient(#ff7b00, #ff7b00);
@@ -5726,7 +4387,7 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   }
 }
 .home .section5 .inBmi {
-  width: 87%;
+  width: 92%;
   margin: 0 auto;
   display: flex;
   border: 1px solid white;
@@ -6196,7 +4857,7 @@ main.ProfileUser .Containers .Left .Section-4 form .Col input::placeholder, main
   background-color: white;
 }
 .home .section7 .faq {
-  width: 88%;
+  width: 92%;
   margin: 0 auto;
   padding: 50px 0;
 }
